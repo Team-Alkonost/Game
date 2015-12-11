@@ -1,0 +1,7 @@
+c:\users\цветан\documents\visual studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+c:\users\цветан\documents\visual studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Alkonost2.exe
+c:\users\цветан\documents\visual studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Alkonost2.pdb
+c:\users\цветан\documents\visual studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\obj\x86\Debug\Alkonost2.exe
+c:\users\цветан\documents\visual studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\obj\x86\Debug\Alkonost2.pdb
+C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Content\Font1.xnb
+C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\obj\x86\Debug\Alkonost2.csprojResolveAssemblyReference.cache
