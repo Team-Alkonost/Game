@@ -91,12 +91,7 @@ namespace Alkonost2
             ScreenManeger.Instance.Update(gameTime);
             base.Update(gameTime);
         }
-        public  void GameClose()
-        {
-
-            Exit();
-        }
-       
+  
 
         /// <summary>
         /// This is called when the game should draw itself.

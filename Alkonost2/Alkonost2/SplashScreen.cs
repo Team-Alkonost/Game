@@ -34,10 +34,7 @@ namespace Alkonost2
        {
            keyState = Keyboard.GetState();
            if (keyState.IsKeyDown(Keys.Enter))
-               ScreenManeger.Instance.AddScreen(new TitleScreen());
-           if (keyState.IsKeyDown(Keys.Escape))
-               game1.GameClose();
-               
+               ScreenManeger.Instance.AddScreen(new TitleScreen());              
 
        }
 

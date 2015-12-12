@@ -37,6 +37,15 @@
       <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\womanH.xnb</Output>
       <Time>2015-12-12T21:19:49.109375+02:00</Time>
     </Item>
+    <Item>
+      <Source>Sprites\knights.png</Source>
+      <Name>Sprites\knights</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\knights.xnb</Output>
+      <Time>2015-12-12T22:34:00.296875+02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{A6002408-9DBF-481E-90E8-3D0EEB8C5C3E}</ContentProjectGUID>
