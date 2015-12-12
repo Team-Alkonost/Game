@@ -49,7 +49,14 @@ namespace Alkonost2
 
 
         Vector2 dimentions;
-       // private static object instance;
+      /// <summary>
+      /// Let's us know if we should transition or not
+      /// </summary>
+        bool transition;
+
+        FadeAnimation fade = new FadeAnimation();
+        Texture2D fadeTexture;
+
 
         #endregion
 
@@ -78,33 +85,62 @@ namespace Alkonost2
 
         public void AddScreen(GameScreen screen) 
         {
+            transition = true;
             newScreen = screen;
-            screenStack.Push(screen);
-            currentScreen.UnloadContent();
-            currentScreen = newScreen;
-            currentScreen.LoadContent(content);
+            fade.IsActive= true;
+            fade.Alpha = 0.0f;
+            fade.ActiveteValue = 1.0f;
         }
 
         public void Initialize() 
         {
             currentScreen = new SplashScreen();
+            fade = new FadeAnimation();  //new2
         }
         public void LoadContent(ContentManager Content)
         {
             content = new ContentManager(Content.ServiceProvider,"Content");
             currentScreen.LoadContent(Content);
+
+            fadeTexture = content.Load<Texture2D>("Und");
+            fade.LoadContent(content, fadeTexture, "", Vector2.Zero);
+            fade.Scale = dimentions.X;
+
+
         }
         public void Update(GameTime gameTime)
         {
-            currentScreen.Update(gameTime); 
+            if (!transition)
+                currentScreen.Update(gameTime);
+            else 
+                Transition(gameTime);  //2
         }
         public void Draw(SpriteBatch spriteBatch) 
         {
-            currentScreen.Draw(spriteBatch); 
+            currentScreen.Draw(spriteBatch);
+            if (transition)  //2
+                fade.Draw(spriteBatch); //2
         }
 
         #endregion
 
-        
+         #region PrivateMethods
+          private void Transition(GameTime gameTime)
+           {
+               fade.Update(gameTime);
+               if (fade.Alpha == 1.0f && fade.Timer.TotalSeconds == 1.0f)
+               {
+                   screenStack.Push(newScreen);
+                   currentScreen.UnloadContent();
+                   currentScreen = newScreen;
+                   currentScreen.LoadContent(content);
+               }
+               else if (fade.Alpha == 0.0f)
+              {
+                  transition = false;
+                  fade.IsActive = false;
+              }
+           }
+         #endregion
     }
 }

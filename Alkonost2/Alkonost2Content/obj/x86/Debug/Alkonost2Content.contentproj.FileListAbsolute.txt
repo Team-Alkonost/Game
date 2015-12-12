@@ -1,1 +1,2 @@
 C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2Content\obj\x86\Debug\Alkonost2Content.contentprojResolveAssemblyReference.cache
+C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2Content\obj\x86\Debug\Alkonost2Content.contentprojResolveAssemblyReference.cache

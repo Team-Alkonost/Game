@@ -25,7 +25,9 @@ namespace Alkonost2
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
+            Content.RootDirectory = "Content"; graphics.PreferredBackBufferWidth = 1000;
+              this.Window.Title = "Alkonost: Siren Of the Sky";
+
         }
 
         /// <summary>
@@ -41,9 +43,10 @@ namespace Alkonost2
 
             ScreenManeger.Instance.Initialize();
 
-            ScreenManeger.Instance.Dimensions = new Vector2(1200, 800);
-            graphics.PreferredBackBufferWidth = (int)ScreenManeger.Instance.Dimensions.X;
-            graphics.PreferredBackBufferWidth = (int)ScreenManeger.Instance.Dimensions.Y;
+            ScreenManeger.Instance.Dimensions = new Vector2(1366, 768);
+            graphics.PreferredBackBufferHeight = 700;
+           // graphics.PreferredBackBufferWidth = (int)ScreenManeger.Instance.Dimensions.X;
+           // graphics.PreferredBackBufferWidth = (int)ScreenManeger.Instance.Dimensions.Y;
             graphics.ApplyChanges();
 
             base.Initialize();
@@ -88,6 +91,12 @@ namespace Alkonost2
             ScreenManeger.Instance.Update(gameTime);
             base.Update(gameTime);
         }
+        public  void GameClose()
+        {
+
+            Exit();
+        }
+       
 
         /// <summary>
         /// This is called when the game should draw itself.
@@ -95,7 +104,7 @@ namespace Alkonost2
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.WhiteSmoke);
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();

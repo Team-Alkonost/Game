@@ -16,6 +16,7 @@ namespace Alkonost2
         
         protected ContentManager content;
 
+
         public virtual void LoadContent(ContentManager Content)
         {
          content = new ContentManager(Content.ServiceProvider,"Content");
@@ -34,5 +35,7 @@ namespace Alkonost2
         public virtual void Draw(SpriteBatch spriteBatch)
         {
         }
+
+
     }
 }

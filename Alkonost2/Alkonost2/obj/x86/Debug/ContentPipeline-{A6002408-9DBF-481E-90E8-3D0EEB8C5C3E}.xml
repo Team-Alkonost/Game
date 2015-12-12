@@ -7,8 +7,35 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Content\Font1.xnb</Output>
+      <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Font1.xnb</Output>
       <Time>2015-12-11T01:34:46.1722819+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Und.png</Source>
+      <Name>Und</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Und.xnb</Output>
+      <Time>2015-12-11T23:51:12.0373139+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\MenueBackground.jpg</Source>
+      <Name>Sprites\MenueBackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\MenueBackground.xnb</Output>
+      <Time>2015-12-11T19:43:53.1340468+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\womanH.png</Source>
+      <Name>Sprites\womanH</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\womanH.xnb</Output>
+      <Time>2015-12-12T21:19:49.109375+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -17,10 +44,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2Content\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

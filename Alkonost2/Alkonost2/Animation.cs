@@ -21,6 +21,18 @@ namespace Alkonost2
        protected Vector2 origin,position;
        protected ContentManager content;
        protected bool isActive;
+       protected float alpha;
+
+       public virtual float Alpha
+       {
+           get { return alpha; }
+           set { alpha = value; }
+       }
+
+       public float Scale
+       {
+           set { scale= value; }
+       }
 
        public bool IsActive
        {
@@ -44,7 +56,7 @@ namespace Alkonost2
            if(image !=null) sourceRect =new Rectangle(0,0,image.Width,image.Height);
            rotation = 0.0f;
            axis = 0.0f;
-           scale = 1.0f;
+           scale =alpha= 1.0f;
            isActive = false;
        }
            public virtual  void UnloadContent()
@@ -57,7 +69,7 @@ namespace Alkonost2
              
            }
 
-           public virtual  void Update(SpriteBatch spriteBatch)          
+           public virtual void Update(GameTime gameTime)          
            {
            }  
            public  virtual void Draw(SpriteBatch spriteBatch)
@@ -66,14 +78,14 @@ namespace Alkonost2
                {
                    origin = new Vector2(sourceRect.Width / 2, sourceRect.Height / 2);
                    spriteBatch.Draw(image, position + origin,sourceRect,
-                       Color.White,rotation,origin,scale,
+                       Color.White *alpha  ,rotation,origin,scale,
                        SpriteEffects.None, 0.0f);
                }
                if (text != String.Empty) 
                {
                    origin = new Vector2(font.MeasureString(text).X / 2,
                        font.MeasureString(text).Y / 2);
-                   spriteBatch.DrawString(font, text, position + origin, color, rotation, origin, scale,
+                   spriteBatch.DrawString(font, text, position + origin, color* alpha, rotation, origin, scale,
                         SpriteEffects.None, 0.0f);
                }
            }

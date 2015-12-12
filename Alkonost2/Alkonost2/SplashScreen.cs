@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
@@ -14,12 +15,14 @@ namespace Alkonost2
    public class SplashScreen : GameScreen
     {
        KeyboardState keyState;
-       SpriteFont font;
+       Texture2D menueImage;
+       public static Game1 game1 = new Game1();
+
 
        public override void LoadContent(ContentManager Content)
        {
            base.LoadContent(Content);
-           if (font == null) font = Content.Load<SpriteFont>("Font1");
+           if (menueImage == null) menueImage = Content.Load<Texture2D>("Sprites/MenueBackground");
        }
 
        public override void UnloadContent()
@@ -30,14 +33,19 @@ namespace Alkonost2
        public override void Update(GameTime gameTime)
        {
            keyState = Keyboard.GetState();
-           if (keyState.IsKeyDown(Keys.Z)) 
+           if (keyState.IsKeyDown(Keys.Enter))
                ScreenManeger.Instance.AddScreen(new TitleScreen());
+           if (keyState.IsKeyDown(Keys.Escape))
+               game1.GameClose();
+               
+
        }
+
 
        public override void Draw(SpriteBatch spriteBatch)
        {
-          
-           spriteBatch.DrawString(font, "SplashScreen", new Vector2(100, 100), Color.Black);
+
+           spriteBatch.Draw(menueImage, new Vector2(0, 0), Color.White);
          
        }
     }
