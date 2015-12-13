@@ -17,6 +17,31 @@ C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Co
 C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\womanH.xnb
 C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\knights.xnb
 C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Font2.xnb
+<<<<<<< HEAD
 C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\ship.xnb
 C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\tile1.xnb
 C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\tile2.xnb
+=======
+C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Font1.xnb
+C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Font2.xnb
+C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Und.xnb
+C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\MenueBackground.xnb
+C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\womanH.xnb
+C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\knights.xnb
+C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Alkonost2.exe
+C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Alkonost2.pdb
+C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Microsoft.Xna.Framework.dll
+C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
+C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
+C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Microsoft.Xna.Framework.xml
+C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
+C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
+C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
+C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
+C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\obj\x86\Debug\Alkonost2.csprojResolveAssemblyReference.cache
+C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\obj\x86\Debug\Alkonost2.exe
+C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\obj\x86\Debug\Alkonost2.pdb
+>>>>>>> efc3bdd56340b272eb2e7fcae50aa2b496629853

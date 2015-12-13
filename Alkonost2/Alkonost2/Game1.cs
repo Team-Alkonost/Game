@@ -17,17 +17,16 @@ namespace Alkonost2
     /// 
 
 
-    public class Game1 : Microsoft.Xna.Framework.Game
+    public class AlkonostGame : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        public Game1()
+        public AlkonostGame()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content"; graphics.PreferredBackBufferWidth = 1000;
               this.Window.Title = "Alkonost: Siren Of the Sky";
-
         }
 
         /// <summary>
@@ -63,7 +62,6 @@ namespace Alkonost2
          
             // TODO: use this.Content to load your game content here
               ScreenManeger.Instance.LoadContent(Content);
-
         }
 
         /// <summary>
@@ -81,12 +79,15 @@ namespace Alkonost2
         /// checking for collisions, gathering input, and playing audio.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
+
         protected override void Update(GameTime gameTime)
         {
             // Allows the game to exit
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
+                Keyboard.GetState().IsKeyDown(Keys.Escape))
+            {
                 this.Exit();
-
+            }
             // TODO: Add your update logic here
             ScreenManeger.Instance.Update(gameTime);
             base.Update(gameTime);

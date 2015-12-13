@@ -1,9 +1,13 @@
 Content\Font1.xnb
+Content\Font2.xnb
 Content\Und.xnb
 Content\Sprites\MenueBackground.xnb
 Content\Sprites\womanH.xnb
 Content\Sprites\knights.xnb
+<<<<<<< HEAD
 Content\Font2.xnb
 Content\Sprites\ship.xnb
 Content\Sprites\tile1.xnb
 Content\Sprites\tile2.xnb
+=======
+>>>>>>> efc3bdd56340b272eb2e7fcae50aa2b496629853
