@@ -1,0 +1,30 @@
+c:\users\цветан\documents\visual studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+c:\users\цветан\documents\visual studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Alkonost2.exe
+c:\users\цветан\documents\visual studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Alkonost2.pdb
+c:\users\цветан\documents\visual studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\obj\x86\Debug\Alkonost2.exe
+c:\users\цветан\documents\visual studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\obj\x86\Debug\Alkonost2.pdb
+C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Content\Font1.xnb
+C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\obj\x86\Debug\Alkonost2.csprojResolveAssemblyReference.cache
+C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\obj\x86\Debug\Alkonost2.csprojResolveAssemblyReference.cache
+C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\obj\x86\Debug\Alkonost2.exe
+C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\obj\x86\Debug\Alkonost2.pdb
+C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Font1.xnb
+C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Und.xnb
+C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Alkonost2.exe
+C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Alkonost2.pdb
+C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\MenueBackground.xnb
+C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\womanH.xnb
+C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\knights.xnb
+C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Font2.xnb
+C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\ship.xnb
+C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\tile1.xnb
+C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\tile2.xnb
+C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Content\Font2.xnb
+C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Content\Und.xnb
+C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\MenueBackground.xnb
+C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\womanH.xnb
+C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\knights.xnb
+C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\ship.xnb
+C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\tile1.xnb
+C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\tile2.xnb
