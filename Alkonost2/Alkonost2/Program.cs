@@ -3,14 +3,14 @@ using System;
 namespace Alkonost2
 {
 #if WINDOWS || XBOX
-    static class Program
+    static class GameEntryPoint
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         static void Main(string[] args)
         {
-            using (Game1 game = new Game1())
+            using (AlkonostGame game = new AlkonostGame())
             {
                 game.Run();
             }
@@ -18,4 +18,3 @@ namespace Alkonost2
     }
 #endif
 }
-

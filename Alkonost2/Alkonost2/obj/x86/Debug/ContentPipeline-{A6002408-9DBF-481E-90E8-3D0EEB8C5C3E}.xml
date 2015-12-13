@@ -7,44 +7,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Font1.xnb</Output>
-      <Time>2015-12-11T01:34:46.1722819+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Und.png</Source>
-      <Name>Und</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Und.xnb</Output>
-      <Time>2015-12-11T23:51:12.0373139+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\MenueBackground.jpg</Source>
-      <Name>Sprites\MenueBackground</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\MenueBackground.xnb</Output>
-      <Time>2015-12-11T19:43:53.1340468+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\womanH.png</Source>
-      <Name>Sprites\womanH</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\womanH.xnb</Output>
-      <Time>2015-12-12T21:19:49.109375+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\knights.png</Source>
-      <Name>Sprites\knights</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\knights.xnb</Output>
-      <Time>2015-12-12T22:34:00.296875+02:00</Time>
+      <Output>C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Font1.xnb</Output>
+      <Time>2015-12-13T00:13:21.0069509+02:00</Time>
     </Item>
     <Item>
       <Source>Font2.spritefont</Source>
@@ -52,8 +16,44 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Font2.xnb</Output>
-      <Time>2015-12-12T23:49:32.3979816+02:00</Time>
+      <Output>C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Font2.xnb</Output>
+      <Time>2015-12-13T00:13:21.0099534+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Und.png</Source>
+      <Name>Und</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Und.xnb</Output>
+      <Time>2015-12-13T00:13:21.0169583+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\MenueBackground.jpg</Source>
+      <Name>Sprites\MenueBackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\MenueBackground.xnb</Output>
+      <Time>2015-12-13T00:13:21.0139562+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\womanH.png</Source>
+      <Name>Sprites\womanH</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\womanH.xnb</Output>
+      <Time>2015-12-13T00:13:21.0169583+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\knights.png</Source>
+      <Name>Sprites\knights</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\knights.xnb</Output>
+      <Time>2015-12-13T00:13:21.0149569+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -62,10 +62,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2Content\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\iunack\Documents\GitHub\FinalGameSolution\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -93,8 +93,8 @@
         <Value>2011-09-01T17:22:30+03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2015-12-09T21:24:53.1417755+02:00</Value>
+        <Key>C:\windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2015-12-10T15:18:44.2354266+02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

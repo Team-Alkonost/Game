@@ -15,9 +15,9 @@ namespace Alkonost2
     /// <summary>
     /// This is a game component that implements IUpdateable.
     /// </summary>
-    public class GameComponent1 : Microsoft.Xna.Framework.GameComponent
+    public class GameComponent : Microsoft.Xna.Framework.GameComponent
     {
-        public GameComponent1(Game game)
+        public GameComponent(Game game)
             : base(game)
         {
             // TODO: Construct any child components here
