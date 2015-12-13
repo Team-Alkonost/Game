@@ -55,6 +55,33 @@
       <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Font2.xnb</Output>
       <Time>2015-12-12T23:49:32.3979816+02:00</Time>
     </Item>
+    <Item>
+      <Source>Sprites\ship.png</Source>
+      <Name>Sprites\ship</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\ship.xnb</Output>
+      <Time>2015-12-13T17:39:03.265625+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\tile1.png</Source>
+      <Name>Sprites\tile1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\tile1.xnb</Output>
+      <Time>2015-12-13T22:34:33.859375+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\tile2.png</Source>
+      <Name>Sprites\tile2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\tile2.xnb</Output>
+      <Time>2015-12-13T22:36:07.21875+02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{A6002408-9DBF-481E-90E8-3D0EEB8C5C3E}</ContentProjectGUID>

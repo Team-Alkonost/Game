@@ -37,11 +37,12 @@ namespace Alkonost2
         {
             keyState = Keyboard.GetState();
             if (keyState.IsKeyDown(Keys.Z)) ScreenManeger.Instance.AddScreen(new SplashScreen());
+            if (keyState.IsKeyDown(Keys.M)) ScreenManeger.Instance.AddScreen(new ScreenMap());
         }
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.DrawString(font, "Choose Battle Heroes : Press \"Z\"  back  to main menue", new Vector2(100, 10), Color.Black);
+            spriteBatch.DrawString(font, "Choose Battle Heroes : Press \"Z\"  back  to main menue Press\"M\" go to the Map ", new Vector2(100, 10), Color.Black);
             spriteBatch.Draw(womanHero, new Vector2(100, 30), Color.White);
             spriteBatch.DrawString(font, "Life : 100 ", new Vector2(300, 100), Color.Blue);
             spriteBatch.DrawString(font, "Damage : 50 ", new Vector2(300, 140), Color.Blue);
