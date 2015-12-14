@@ -7,7 +7,7 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Content\Font1.xnb</Output>
+      <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Font1.xnb</Output>
       <Time>2015-12-11T01:34:46.1722819+02:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Content\Font2.xnb</Output>
+      <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Font2.xnb</Output>
       <Time>2015-12-12T23:49:32.3979816+02:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Content\Und.xnb</Output>
+      <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Und.xnb</Output>
       <Time>2015-12-11T23:51:12.0373139+02:00</Time>
     </Item>
     <Item>
@@ -34,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\MenueBackground.xnb</Output>
+      <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\MenueBackground.xnb</Output>
       <Time>2015-12-11T19:43:53.1340468+02:00</Time>
     </Item>
     <Item>
@@ -43,7 +43,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\womanH.xnb</Output>
+      <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\womanH.xnb</Output>
       <Time>2015-12-12T21:19:49.109375+02:00</Time>
     </Item>
     <Item>
@@ -52,7 +52,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\knights.xnb</Output>
+      <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\knights.xnb</Output>
       <Time>2015-12-12T22:34:00.296875+02:00</Time>
     </Item>
     <Item>
@@ -61,7 +61,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\ship.xnb</Output>
+      <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\ship.xnb</Output>
       <Time>2015-12-13T17:39:03.265625+02:00</Time>
     </Item>
     <Item>
@@ -70,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\tile1.xnb</Output>
-      <Time>2015-12-13T22:34:33.859375+02:00</Time>
+      <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\tile1.xnb</Output>
+      <Time>2015-12-14T21:58:49.65625+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\tile2.png</Source>
@@ -79,8 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\tile2.xnb</Output>
-      <Time>2015-12-13T22:36:07.21875+02:00</Time>
+      <Output>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\Sprites\tile2.xnb</Output>
+      <Time>2015-12-14T21:59:13.234375+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -89,10 +89,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2Content\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Цветан\Documents\Visual Studio 2013\Projects\Alkonost2\Alkonost2\Alkonost2\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Цветан\Documents\GitHub\Game\Alkonost2\Alkonost2\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
