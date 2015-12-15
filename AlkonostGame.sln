@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlkonostXNAGame", "AlkonostXNA\AlkonostXNA\AlkonostXNAGame.csproj", "{7583ED27-50BD-414D-8861-E7AB62FD54B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlkonostContent", "AlkonostXNA\AlkonostXNAContent\AlkonostContent.contentproj", "{A6002408-9DBF-481E-90E8-3D0EEB8C5C3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7583ED27-50BD-414D-8861-E7AB62FD54B7}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{7583ED27-50BD-414D-8861-E7AB62FD54B7}.Debug|x86.ActiveCfg = Debug|x86
+		{7583ED27-50BD-414D-8861-E7AB62FD54B7}.Debug|x86.Build.0 = Debug|x86
+		{7583ED27-50BD-414D-8861-E7AB62FD54B7}.Release|Any CPU.ActiveCfg = Release|x86
+		{7583ED27-50BD-414D-8861-E7AB62FD54B7}.Release|x86.ActiveCfg = Release|x86
+		{7583ED27-50BD-414D-8861-E7AB62FD54B7}.Release|x86.Build.0 = Release|x86
+		{A6002408-9DBF-481E-90E8-3D0EEB8C5C3E}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{A6002408-9DBF-481E-90E8-3D0EEB8C5C3E}.Debug|x86.ActiveCfg = Debug|x86
+		{A6002408-9DBF-481E-90E8-3D0EEB8C5C3E}.Release|Any CPU.ActiveCfg = Release|x86
+		{A6002408-9DBF-481E-90E8-3D0EEB8C5C3E}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
