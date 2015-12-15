@@ -8,5 +8,6 @@ namespace SourseCode.Models.ModelsInterfases
     public interface IAttackable
     {
         double Hit();
+        double Defend();
     }
 }

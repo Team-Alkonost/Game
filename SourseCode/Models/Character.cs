@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 
 namespace SourseCode.Models
 {
-    using Microsoft.Xna.Framework.Graphics;
     using ModelsInterfases;
 
     public abstract class Character : ICharacter, IAttackable
@@ -15,15 +11,13 @@ namespace SourseCode.Models
         private double damage;
         private double health;
         private double movement;
-        private int critChance;
             
-        protected Character(double health, double damage, double armor, double movement, Texture2D image)
+        protected Character(double health, double damage, double armor, double movement)
         {
             this.Health = health;
             this.Damage = damage;
             this.Armor = armor;
             this.Movement = movement;
-            this.Image = image;
         }           
 
         public double Armor
@@ -90,10 +84,9 @@ namespace SourseCode.Models
             }
         }
 
-        public int CritChance { get; set; }
-
-        public Texture2D Image { get; protected set; }
 
         public abstract double Hit();
+
+        public abstract double Defend();
     }
 }

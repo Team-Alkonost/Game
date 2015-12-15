@@ -1,9 +1,5 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Alkonost2.Models.ModelsInterfases;
-using Microsoft.Xna.Framework.Graphics;
 
 namespace SourseCode.Models
 {
@@ -14,13 +10,12 @@ namespace SourseCode.Models
         private const double DefautArmor = 10;
         private const double DefautMovement = 100;
         private const double MovementEfect = 0.05;        
-        private readonly List<Item> inventory;
+        private HashSet<Item> inventory;
 
-        public Player(double healt, double damage, double armor, double movement, Texture2D image) 
-            : base(DefautHealth, DefautDamage, DefautArmor, DefautMovement, image)
+        public Player(double healt, double damage, double armor, double movement) 
+            : base(DefautHealth, DefautDamage, DefautArmor, DefautMovement)
         {
-            this.inventory = new List<Item>();
-            this.CritChance = 3;
+            this.inventory = new HashSet<Item>();
         }
 
         public IEnumerable<Item> Inventory
@@ -29,7 +24,12 @@ namespace SourseCode.Models
             {
                 return this.inventory;
             }
-        }      
+        }  
+        
+        public void AddItem(Item item)
+        {
+            inventory.Add(item);
+        }    
 
         public override double Hit()
         {
@@ -49,7 +49,7 @@ namespace SourseCode.Models
             return finalDamage;            
         }
 
-        public double Defend()
+        public override double Defend()
         {
             double totalHealth = this.CalculateHealth();
             return totalHealth;

@@ -1,7 +1,5 @@
 ﻿
 
-using Microsoft.Xna.Framework.Graphics;
-
 namespace SourseCode.Models.ModelsInterfases
 {
     public  interface ICharacter
@@ -10,6 +8,5 @@ namespace SourseCode.Models.ModelsInterfases
         double Damage { get; }
         double Armor { get; }
         double Movement { get; }
-        Texture2D Image { get; }
     }
 }

@@ -44,7 +44,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Character.cs" />
+    <Compile Include="Models\Enemies\Enemy.cs" />
     <Compile Include="Models\Gaunlet.cs" />
+    <Compile Include="Models\HelpPackages\ArmorUpgrade.cs" />
+    <Compile Include="Models\HelpPackages\FirstAid.cs" />
+    <Compile Include="Models\HelpPackages\HelpPackage.cs" />
+    <Compile Include="Models\HelpPackages\WhetStone.cs" />
+    <Compile Include="Models\HelpPackages\Wine.cs" />
     <Compile Include="Models\Items\Axe.cs" />
     <Compile Include="Models\Items\Boots.cs" />
     <Compile Include="Models\Items\Dager.cs" />
@@ -54,7 +60,9 @@
     <Compile Include="Models\Items\Item.cs" />
     <Compile Include="Models\Items\Sheald.cs" />
     <Compile Include="Models\ModelsInterfases\IAttackable.cs" />
+    <Compile Include="Models\ModelsInterfases\IBonus.cs" />
     <Compile Include="Models\ModelsInterfases\ICharacter.cs" />
+    <Compile Include="Models\ModelsInterfases\IEnemy.cs" />
     <Compile Include="Models\ModelsInterfases\IItem.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Program.cs" />
@@ -63,6 +71,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
