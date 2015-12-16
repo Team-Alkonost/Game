@@ -89,7 +89,8 @@
     <Compile Include="AlkonostDataStructure\Data\Helmet.cs" />
     <Compile Include="AlkonostDataStructure\Data\Item.cs" />
     <Compile Include="AlkonostDataStructure\Data\Shield.cs" />
-    <Compile Include="AlkonostDataStructure\Engine\IEngine.cs" />
+    <Compile Include="AlkonostDataStructure\Engine\GameScreen.cs" />
+    <Compile Include="AlkonostDataStructure\Interfaces\IEngine.cs" />
     <Compile Include="AlkonostDataStructure\Interfaces\IAttackable.cs" />
     <Compile Include="AlkonostDataStructure\Interfaces\IBonus.cs" />
     <Compile Include="AlkonostDataStructure\Interfaces\ICharacter.cs" />

@@ -1,6 +1,6 @@
 ﻿
 
-namespace AlkonostXNAGame.AlkonostDataStructure.Engine
+namespace AlkonostXNAGame.AlkonostDataStructure.Interfaces
 {
     public interface IEngine
     {
