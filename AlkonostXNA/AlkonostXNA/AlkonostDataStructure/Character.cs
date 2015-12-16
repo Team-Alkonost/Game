@@ -86,5 +86,9 @@ namespace AlkonostXNAGame.AlkonostDataStructure
         public abstract double Hit();
 
         public abstract double Defend();
+
+        protected abstract double CalculateHealth();
+
+        protected abstract double CalculateAttackPoints();
     }
 }
