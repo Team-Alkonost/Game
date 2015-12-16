@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using AlkonostXNAGame.AlkonostDataStructure.Data;
+using AlkonostXNAGame.XNAData;
 
-namespace AlkonostXNAGame.AlkonostDataStructure
+namespace AlkonostXNAGame.AlkonostDataStructure.Data
 {
-    public class Player : Character
+    public partial class Player : Character
     {
         private const double DefautHealth = 100;
         private const double DefautDamage = 50;
