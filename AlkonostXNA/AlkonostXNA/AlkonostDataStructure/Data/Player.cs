@@ -9,10 +9,10 @@ namespace AlkonostXNAGame.AlkonostDataStructure
         private const double DefautDamage = 50;
         private const double DefautArmor = 10;
         private const double DefautMovement = 100;
-        private const double MovementEfect = 0.05;        
+        private const double MovementEffect = 0.05;        
         private HashSet<Item> inventory;
 
-        public Player(double healt, double damage, double armor, double movement) 
+        public Player() 
             : base(DefautHealth, DefautDamage, DefautArmor, DefautMovement)
         {
             this.inventory = new HashSet<Item>();
@@ -28,7 +28,7 @@ namespace AlkonostXNAGame.AlkonostDataStructure
         
         public void AddItem(Item item)
         {
-            inventory.Add(item);
+            inventory.Add(item);            
         }    
 
         public override double Hit()
@@ -36,13 +36,13 @@ namespace AlkonostXNAGame.AlkonostDataStructure
             double damage =  this.CalculateAttackPoints();
             return damage;
         }
-        private double CalculateAttackPoints()
+        protected override double CalculateAttackPoints()
         {
             double sumOfDamageOfItems = 0;
             double finalDamage = 0;
             foreach (Item item in Inventory)
             {               
-                sumOfDamageOfItems += item.BonusDamage + (item.BonusMovement * MovementEfect);
+                sumOfDamageOfItems += item.BonusDamage + (item.BonusMovement * MovementEffect);
             }
             finalDamage += this.Damage + sumOfDamageOfItems;
 
@@ -55,13 +55,13 @@ namespace AlkonostXNAGame.AlkonostDataStructure
             return totalHealth;
         }
 
-        public double CalculateHealth()
+        protected override double CalculateHealth()
         {
             double finalHealth = 0;
             double itemHealthBonus = 0;
             foreach (Item item in Inventory)
             {
-                itemHealthBonus += item.BonusHealth + item.BonusArmor +(item.BonusMovement * MovementEfect);
+                itemHealthBonus += item.BonusHealth + item.BonusArmor +(item.BonusMovement * MovementEffect);
             }
             return finalHealth += this.Damage + itemHealthBonus;
         }
