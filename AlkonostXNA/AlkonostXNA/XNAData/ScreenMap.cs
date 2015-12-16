@@ -17,13 +17,15 @@ namespace AlkonostXNAGame.XNAData
         public Vector2  position ;
         public int speed;
         Map map;
-        
+        SpriteFont font;
+
         public ScreenMap()
         {
             texture = null;
             position = new Vector2(300, 300);
             map = new Map();
             speed = 3;
+            
         }
 
         public override void LoadContent(ContentManager Content)
@@ -31,6 +33,7 @@ namespace AlkonostXNAGame.XNAData
             base.LoadContent(Content);
             texture = Content.Load<Texture2D>("Sprites/ship");
             Tiles.Content = Content; //map class
+            if (font == null) font = Content.Load<SpriteFont>("Font1");
             map.Generate(new int[,]{
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
                 {1,2,2,2,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2,2,2,1},
@@ -43,7 +46,7 @@ namespace AlkonostXNAGame.XNAData
                 {1,2,2,2,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
-                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
+                {1,1,1,1,1,1,1,1,1,1,1,3,1,1,1,2,2,2,2,2,2,1},
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,1,2,2,2,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
@@ -53,7 +56,7 @@ namespace AlkonostXNAGame.XNAData
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
             }, 32);  //map class
-            
+
         }
 
         public override void UnloadContent()
@@ -81,7 +84,15 @@ namespace AlkonostXNAGame.XNAData
         {
             map.Draw(spriteBatch);
             spriteBatch.Draw(texture, position, Color.White);
-         
+            float g = position.X;
+            string h = g.ToString();
+            float g2 = position.Y;
+            string h2 = g2.ToString();
+
+            if (position.X == 354)
+                if (position.Y == 354) { spriteBatch.DrawString(font, "Colision", new Vector2(750, 150), Color.Blue); }
+            spriteBatch.DrawString(font, h, new Vector2(750, 50), Color.Blue);
+            spriteBatch.DrawString(font, h2, new Vector2(750, 100), Color.Blue);
         }
     }
 }
