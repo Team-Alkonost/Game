@@ -20,8 +20,9 @@ namespace AlkonostXNAGame.XNAData
         Map map;
         Player player;
         SpriteFont font;
+        string Colision="";
         int[,] matrix1 = new int[,]{
-                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+                {4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
                 {1,2,2,2,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,2,2,2,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,2,2,2,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2,2,2,1},
@@ -32,7 +33,7 @@ namespace AlkonostXNAGame.XNAData
                 {1,2,2,2,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
-                {1,1,1,1,1,1,1,1,1,1,1,3,1,1,1,2,2,2,2,2,2,1},
+                {1,1,1,1,1,1,1,1,1,1,1,4,1,1,1,2,2,2,2,2,2,1},
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,1,2,2,2,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
@@ -40,7 +41,7 @@ namespace AlkonostXNAGame.XNAData
                 {1,1,2,2,2,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
-                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+                {4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
             };
 
         public ScreenMap()
@@ -51,6 +52,7 @@ namespace AlkonostXNAGame.XNAData
             player = new Player();
             speed = 3;
             player.Initialize();
+           
             
         }
 
@@ -97,17 +99,31 @@ namespace AlkonostXNAGame.XNAData
             string gX = g.ToString();
             int g2 = (int)player.position.Y / 32;
             string gY = g2.ToString();
-
+           //--Load from file
             if (g == 11)
                 if (g2 == 10)
                 {
                   matrix1[11, 11] = 1;  //update matrix
                   this.map.Generate(matrix1, 32);  //reload matrixx
-                  
+                  Colision= "Enemy ded ";   }
+            if (g == 0)
+                if (g2 == 0)
+                {
+                    matrix1[0, 0] = 1;  //update matrix
+                    this.map.Generate(matrix1, 32);  //reload matrixx
+                    Colision = "Enemy ded ";
                 }
+            if (g == 0)
+                if (g2 == 21)
+                {
+                    matrix1[0, 21] = 1;  //update matrix
+                    this.map.Generate(matrix1, 32);  //reload matrixx
+                    Colision = "Enemy ded ";
+                }
+            //--Load from file
             spriteBatch.DrawString(font, gX, new Vector2(750, 50), Color.Blue);
-            spriteBatch.DrawString(font, gY, new Vector2(750, 100), Color.Blue); 
-            //spriteBatch.DrawString(font, "Colision", new Vector2(750, 150), Color.Blue); 
+            spriteBatch.DrawString(font, gY, new Vector2(750, 100), Color.Blue);
+            spriteBatch.DrawString(font, Colision, new Vector2(750, 150), Color.Blue); 
         }
 
      
