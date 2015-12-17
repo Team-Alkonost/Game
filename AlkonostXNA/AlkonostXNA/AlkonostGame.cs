@@ -10,7 +10,6 @@ namespace AlkonostXNAGame.XNAData
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-
         public AlkonostGame()
         {
             graphics = new GraphicsDeviceManager(this);

@@ -1,46 +1,45 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Audio;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Media;
-using AlkonostXNAGame.Config;
-using AlkonostXNAGame.AlkonostDataStructure.Data;
+using Microsoft.Xna.Framework.Content;
 
 namespace AlkonostXNAGame.XNAData.CharacterAnimation
 {
-    public class KnightAnimation : Player
+    public class KnightAnimation
     {
         float timer = 0f;
         float interval = 200f;
         int currentFrame = 0;
-        int spriteWidth = 32;
-        int spriteHeight = 48;
-        float spriteSpeed = GameSettings.DefaultPlayerMovementSpeed;
+        int spriteWidth = 0;
+        int spriteHeight = 0;
+        public Rectangle sourceRect;
         KeyboardState currentKBState;
         KeyboardState previousKBState;
+        public Texture2D texture;
+        public Vector2 origin;
 
-        public KnightAnimation(Texture2D texture = null, int currentFrame = 0, int spriteWidth = 0, 
-            int spriteHeight = 0)
+        public void Initialize()
         {
-            this.playerTexture = texture;
-            this.currentFrame = currentFrame;
-            this.spriteWidth = spriteWidth;
-            this.spriteHeight = spriteHeight;
+            this.currentFrame = 0;
+            this.spriteWidth = 32;
+            this.spriteHeight = 48;
+            this.sourceRect = new Rectangle(currentFrame * spriteWidth, 0, spriteWidth, spriteHeight);
+            this.origin = new Vector2(sourceRect.Width / 2, sourceRect.Height / 2);
         }
 
-        public void HandleSpriteMovement(GameTime gameTime)
+        public void LoadContent(ContentManager content)
+        {
+            texture = content.Load<Texture2D>("Sprites/SpriteSheet");
+        }
+
+        public void Update()
         {
             previousKBState = currentKBState;
             currentKBState = Keyboard.GetState();
 
             sourceRect = new Rectangle(currentFrame * spriteWidth, 0, spriteWidth, spriteHeight);
 
-            if (currentKBState.GetPressedKeys().Length == 0)
+            if (InputManager.Instance.AnyButtonsPressed() == false)
             {
                 if (currentFrame > 0 && currentFrame < 4)
                 {
@@ -59,56 +58,6 @@ namespace AlkonostXNAGame.XNAData.CharacterAnimation
                     currentFrame = 12;
                 }
             }
-
-            // This check is a little bit I threw in there to allow the character to sprint.
-            if (currentKBState.IsKeyDown(Keys.Space))
-            {
-                spriteSpeed = 3;
-                interval = 100;
-            }
-            else
-            {
-                spriteSpeed = 2;
-                interval = 200;
-            }
-
-            if (currentKBState.IsKeyDown(Keys.Right) == true)
-            {
-                AnimateRight(gameTime);
-                if (position.X < 780)
-                {
-                    position.X += spriteSpeed;
-                }
-            }
-
-            if (currentKBState.IsKeyDown(Keys.Left) == true)
-            {
-                AnimateLeft(gameTime);
-                if (position.X > 20)
-                {
-                    position.X -= spriteSpeed;
-                }
-            }
-
-            if (currentKBState.IsKeyDown(Keys.Down) == true)
-            {
-                AnimateDown(gameTime);
-                if (position.Y < 575)
-                {
-                    position.Y += spriteSpeed;
-                }
-            }
-
-            if (currentKBState.IsKeyDown(Keys.Up) == true)
-            {
-                AnimateUp(gameTime);
-                if (position.Y > 25)
-                {
-                    position.Y -= spriteSpeed;
-                }
-            }
-
-            origin = new Vector2(sourceRect.Width / 2, sourceRect.Height / 2);
         }
 
         public void AnimateRight(GameTime gameTime)

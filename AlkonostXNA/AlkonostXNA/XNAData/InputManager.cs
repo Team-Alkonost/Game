@@ -1,6 +1,8 @@
 ﻿using AlkonostXNAGame.Config;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace AlkonostXNAGame.XNAData
@@ -22,14 +24,29 @@ namespace AlkonostXNAGame.XNAData
             }
         }
 
-        public void ExecuteOnKeyPressed(Keys key, Action methodToExecute)
+        public KeyboardState KeyboardState
         {
-            KeyboardState keyboardState = Keyboard.GetState();
-            bool isKeyPressed = keyboardState.IsKeyDown(key);
-            if (isKeyPressed)
+            get
             {
-                methodToExecute();
+                return Keyboard.GetState();
             }
+        }
+
+        public bool IsKeyPressed(Keys key)
+        {
+            bool isKeyPressed = KeyboardState.IsKeyDown(key);
+
+            return isKeyPressed;
+        }
+
+        public bool AnyButtonsPressed()
+        {
+            if (this.KeyboardState.GetPressedKeys().Length > 0)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

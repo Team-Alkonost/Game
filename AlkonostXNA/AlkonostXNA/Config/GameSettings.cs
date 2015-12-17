@@ -10,7 +10,7 @@ namespace AlkonostXNAGame.Config
         public const Keys DownKey = Keys.S;
         public const Keys LeftKey = Keys.A;
         public const Keys RightKey = Keys.D;
-        public const Keys SpaceKey = Keys.Space;
+        public const Keys RunKey = Keys.Space;
 
         public const float DefaultVelocity = 1f;
         public const float DefaultPlayerMovementSpeed = 2f;

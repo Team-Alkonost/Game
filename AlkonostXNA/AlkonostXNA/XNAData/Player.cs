@@ -4,44 +4,21 @@ using AlkonostXNAGame.XNAData.CharacterAnimation;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using System;
+using System.Collections.Generic;
 
 namespace AlkonostXNAGame.AlkonostDataStructure.Data
 {
     public partial class Player
     {
         public float velocity;
-        public Texture2D playerTexture;
         public Vector2 position;
-        public Vector2 origin;
-        public Rectangle sourceRect;
-        
-
-        public Vector2 Position
-        {
-            get { return position; }
-            set { position = value; }
-        }
-
-        public Vector2 Origin
-        {
-            get { return origin; }
-            set { origin = value; }
-        }
-
-        public Texture2D PlayerTexture
-        {
-            get { return playerTexture; }
-            set { playerTexture = value; }
-        }
-
-        public Rectangle SourceRect
-        {
-            get { return sourceRect; }
-            set { sourceRect = value; }
-        }
+        public KnightAnimation animation;
 
         public void Initialize()
         {
+            animation = new KnightAnimation();
+            animation.Initialize();
             MovementSpeed = GameSettings.DefaultPlayerMovementSpeed;
             velocity = GameSettings.DefaultVelocity;
             position = GameSettings.StartingPlayerPosition;
@@ -49,19 +26,45 @@ namespace AlkonostXNAGame.AlkonostDataStructure.Data
 
         public void LoadContent(ContentManager content)
         {
+            animation.LoadContent(content);
         }
 
-        public void Update()
+        public void Update(GameTime gameTime)
         {
-            InputManager.Instance.ExecuteOnKeyPressed(GameSettings.UpKey, this.MoveUp);
-            InputManager.Instance.ExecuteOnKeyPressed(GameSettings.DownKey, this.MoveDown);
-            InputManager.Instance.ExecuteOnKeyPressed(GameSettings.LeftKey, this.MoveLeft);
-            InputManager.Instance.ExecuteOnKeyPressed(GameSettings.RightKey, this.MoveRight);
+            animation.Update();
+            if (InputManager.Instance.IsKeyPressed(GameSettings.UpKey))
+            {
+                this.animation.AnimateUp(gameTime);
+                this.MoveUp();
+            }
+            if (InputManager.Instance.IsKeyPressed(GameSettings.DownKey))
+            {
+                this.animation.AnimateDown(gameTime);
+                this.MoveDown();
+            }
+            if (InputManager.Instance.IsKeyPressed(GameSettings.LeftKey))
+            {
+                this.animation.AnimateLeft(gameTime);
+                this.MoveLeft();
+            }
+            if (InputManager.Instance.IsKeyPressed(GameSettings.RightKey))
+            {
+                this.animation.AnimateRight(gameTime);
+                this.MoveRight();
+            }
+            if (InputManager.Instance.IsKeyPressed(GameSettings.RunKey))
+            {
+                velocity = 3;
+            }
+            else
+            {
+                velocity = GameSettings.DefaultVelocity;
+            }
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(playerTexture, position, Color.White);
+            spriteBatch.Draw(this.animation.texture, this.position, this.animation.sourceRect, Color.White, 0f, this.animation.origin, 1.0f, SpriteEffects.None, 0);
         }
 
         private void MoveUp()
@@ -74,7 +77,7 @@ namespace AlkonostXNAGame.AlkonostDataStructure.Data
 
         private void MoveDown()
         {
-            if (this.position.Y + (MovementSpeed * velocity) <= 645 - playerTexture.Height)
+            if (this.position.Y + (MovementSpeed * velocity) <= 645 - this.animation.texture.Height)
             {
                 this.position.Y += MovementSpeed * velocity;
             }
@@ -82,7 +85,7 @@ namespace AlkonostXNAGame.AlkonostDataStructure.Data
 
         private void MoveRight()
         {
-            if(this.position.X + (MovementSpeed * velocity) <= 700 - playerTexture.Width)
+            if(this.position.X + (MovementSpeed * velocity) <= 2100 - this.animation.texture.Width)
             {
                 this.position.X += MovementSpeed * velocity;
             }
@@ -90,10 +93,16 @@ namespace AlkonostXNAGame.AlkonostDataStructure.Data
 
         private void MoveLeft()
         {
+
             if (this.position.X - (MovementSpeed * velocity) >= 0)
             {
                 this.position.X -= MovementSpeed * velocity;
             }
+        }
+
+        private void ChooseAnimation()
+        {
+            
         }
     }
 }

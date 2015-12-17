@@ -10,7 +10,7 @@ namespace AlkonostXNAGame.XNAData
 {
     class ScreenMap : GameScreen
     {
-        KnightAnimation player;
+        Player player;
         KeyboardState keyState;
 
         Map map;
@@ -19,19 +19,20 @@ namespace AlkonostXNAGame.XNAData
         public ScreenMap()
         {
             map = new Map();
+            player = new Player();
         }
 
         public override void Initialize()
         {
+            player.Initialize();
             base.Initialize();
         }
 
         public override void LoadContent(ContentManager content)
         {
             base.LoadContent(content);
-            player = new KnightAnimation(content.Load<Texture2D>("Sprites/SpriteSheet"), 1, 32, 48);
-            player.Position = new Vector2(400, 300);
             Tiles.Content = content; //map class
+            player.LoadContent(content);
             if (font == null)
             {
                 font = content.Load<SpriteFont>("Font1");
@@ -69,7 +70,7 @@ namespace AlkonostXNAGame.XNAData
 
         public override void Update(GameTime gameTime)
         {
-            player.HandleSpriteMovement(gameTime);
+            player.Update(gameTime);
             //exit from this window
             if (keyState.IsKeyDown(Keys.Z)) ScreenManager.Instance.AddScreen(new SplashScreen());
         }
@@ -77,13 +78,13 @@ namespace AlkonostXNAGame.XNAData
         public override void Draw(SpriteBatch spriteBatch)
         {
             map.Draw(spriteBatch);
-            spriteBatch.Draw(player.PlayerTexture, player.Position, player.SourceRect, Color.White, 0f, player.Origin, 1.0f, SpriteEffects.None, 0);
-            float g = player.Position.X;
+            player.Draw(spriteBatch);
+            float g = player.position.X;
             string h = g.ToString();
-            float g2 = player.Position.Y;
+            float g2 = player.position.Y;
             string h2 = g2.ToString();
 
-            if (player.Position.X == 354 && player.Position.Y == 354)
+            if (player.position.X == 354 && player.position.Y == 354)
             {
                 spriteBatch.DrawString(font, "Collision", new Vector2(750, 150), Color.Blue);
             }
