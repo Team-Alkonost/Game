@@ -3,42 +3,24 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using AlkonostXNAGame.AlkonostDataStructure.Data;
-using AlkonostXNAGame.XNAData.GameGraphic;
-using AlkonostXNAGame.XNAData.CharacterAnimation;
 
 namespace AlkonostXNAGame.XNAData
 {
-    class ScreenMap : GameScreen
+    using GameGraphic;
+    using CharacterAnimation;
+    
+    
+
+    class ScreenMap:GameScreen
     {
-        Player player;
         KeyboardState keyState;
-
+       // public Texture2D texture;
+        public Vector2  position ;
+        public int speed;
         Map map;
+        Player player;
         SpriteFont font;
-
-        public ScreenMap()
-        {
-            map = new Map();
-            player = new Player();
-        }
-
-        public override void Initialize()
-        {
-            player.Initialize();
-            base.Initialize();
-        }
-
-        public override void LoadContent(ContentManager content)
-        {
-            base.LoadContent(content);
-            Tiles.Content = content; //map class
-            player.LoadContent(content);
-            if (font == null)
-            {
-                font = content.Load<SpriteFont>("Font1");
-            }
-
-            map.Generate(new int[,]{
+        int[,] matrix1 = new int[,]{
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
                 {1,2,2,2,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,2,2,2,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2,2,2,1},
@@ -59,8 +41,33 @@ namespace AlkonostXNAGame.XNAData
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
-            }, 32);  //map class
+            };
 
+        public ScreenMap()
+        {
+         
+           // position = new Vector2(300, 300);
+            map = new Map();
+            player = new Player();
+            speed = 3;
+            player.Initialize();
+            
+        }
+
+        public override void Initialize()
+        {
+            player.Initialize();
+            base.Initialize();
+        }
+
+        public override void LoadContent(ContentManager Content)
+        {
+            base.LoadContent(Content);
+            
+            Tiles.Content = Content; //map class
+            if (font == null) font = Content.Load<SpriteFont>("Font1");
+            map.Generate(matrix1, 32);  //map class
+            player.LoadContent(content);
         }
 
         public override void UnloadContent()
@@ -70,27 +77,39 @@ namespace AlkonostXNAGame.XNAData
 
         public override void Update(GameTime gameTime)
         {
+            keyState = Keyboard.GetState();
             player.Update(gameTime);
+
+            if (player.position.X <= 0) player.position.X = 0;
+            if (player.position.X >= 700-20 ) player.position.X = 700 - 20;
+            if (player.position.Y <= 0) player.position.Y = 0;
+            if (player.position.Y >= 645 - 20) player.position.Y = 645 - 20;
             //exit from this window
-            if (keyState.IsKeyDown(Keys.Z)) ScreenManager.Instance.AddScreen(new SplashScreen());
+          //  if (keyState.IsKeyDown(Keys.Z)) ScreenManeger.Instance.AddScreen(new SplashScreen());
         }
 
         public override void Draw(SpriteBatch spriteBatch)
         {
             map.Draw(spriteBatch);
+           // spriteBatch.Draw(texture, position, Color.White);
             player.Draw(spriteBatch);
-            float g = player.position.X;
-            string h = g.ToString();
-            float g2 = player.position.Y;
-            string h2 = g2.ToString();
+            int g = (int)player.position.X / 32;
+            string gX = g.ToString();
+            int g2 = (int)player.position.Y / 32;
+            string gY = g2.ToString();
 
-            if (player.position.X == 354 && player.position.Y == 354)
-            {
-                spriteBatch.DrawString(font, "Collision", new Vector2(750, 150), Color.Blue);
-            }
-
-            spriteBatch.DrawString(font, h, new Vector2(750, 50), Color.Blue);
-            spriteBatch.DrawString(font, h2, new Vector2(750, 100), Color.Blue);
+            if (g == 11)
+                if (g2 == 10)
+                {
+                  matrix1[11, 11] = 1;  //update matrix
+                  this.map.Generate(matrix1, 32);  //reload matrixx
+                  
+                }
+            spriteBatch.DrawString(font, gX, new Vector2(750, 50), Color.Blue);
+            spriteBatch.DrawString(font, gY, new Vector2(750, 100), Color.Blue); 
+            //spriteBatch.DrawString(font, "Colision", new Vector2(750, 150), Color.Blue); 
         }
+
+     
     }
 }
