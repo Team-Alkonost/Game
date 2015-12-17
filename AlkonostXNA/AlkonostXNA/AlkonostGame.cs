@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using AlkonostXNAGame.XNAData.CharacterAnimation;
 
 namespace AlkonostXNAGame.XNAData
 {
@@ -8,6 +9,7 @@ namespace AlkonostXNAGame.XNAData
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+
 
         public AlkonostGame()
         {
@@ -45,9 +47,10 @@ namespace AlkonostXNAGame.XNAData
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            ScreenManager.Instance.LoadContent(Content);           
+            
             // TODO: use this.Content to load your game content here
-            ScreenManager.Instance.LoadContent(Content);
+
 
         }
 
@@ -74,7 +77,6 @@ namespace AlkonostXNAGame.XNAData
 
             // TODO: Add your update logic here
             ScreenManager.Instance.Update(gameTime);
-
             base.Update(gameTime);
         }
 
@@ -90,6 +92,7 @@ namespace AlkonostXNAGame.XNAData
             // TODO: Add your drawing code here
             spriteBatch.Begin();
             ScreenManager.Instance.Draw(spriteBatch);
+            //spriteBatch.Draw(sprite.Texture, sprite.Position, sprite.SourceRect, Color.White, 0f, sprite.Origin, 1.0f, SpriteEffects.None, 0);
             spriteBatch.End();
             base.Draw(gameTime);
         }

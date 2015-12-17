@@ -102,7 +102,6 @@
     <Compile Include="Config\GameSettings.cs" />
     <Compile Include="XNAData\Animation.cs" />
     <Compile Include="XNAData\FadeAnimation.cs" />
-    <Compile Include="XNAData\GameComponent.cs" />
     <Compile Include="XNAData\GameGraphic\DrawRectangle.cs" />
     <Compile Include="XNAData\GameGraphic\Map.cs" />
     <Compile Include="XNAData\GameGraphic\Tiles.cs" />
@@ -112,6 +111,7 @@
     <Compile Include="AlkonostGame.cs" />
     <Compile Include="XNAData\InputManager.cs" />
     <Compile Include="XNAData\Player.cs" />
+    <Compile Include="XNAData\CharacterAnimation\KnightAnimation.cs" />
     <Compile Include="XNAData\ScreenManager.cs" />
     <Compile Include="XNAData\ScreenMap.cs" />
     <Compile Include="XNAData\SplashScreen.cs" />

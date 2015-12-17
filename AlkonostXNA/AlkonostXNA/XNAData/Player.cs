@@ -1,5 +1,6 @@
 ﻿using AlkonostXNAGame.Config;
 using AlkonostXNAGame.XNAData;
+using AlkonostXNAGame.XNAData.CharacterAnimation;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
@@ -9,8 +10,35 @@ namespace AlkonostXNAGame.AlkonostDataStructure.Data
     public partial class Player
     {
         public float velocity;
-        public Texture2D texture;
+        public Texture2D playerTexture;
         public Vector2 position;
+        public Vector2 origin;
+        public Rectangle sourceRect;
+        
+
+        public Vector2 Position
+        {
+            get { return position; }
+            set { position = value; }
+        }
+
+        public Vector2 Origin
+        {
+            get { return origin; }
+            set { origin = value; }
+        }
+
+        public Texture2D PlayerTexture
+        {
+            get { return playerTexture; }
+            set { playerTexture = value; }
+        }
+
+        public Rectangle SourceRect
+        {
+            get { return sourceRect; }
+            set { sourceRect = value; }
+        }
 
         public void Initialize()
         {
@@ -21,7 +49,6 @@ namespace AlkonostXNAGame.AlkonostDataStructure.Data
 
         public void LoadContent(ContentManager content)
         {
-            texture = content.Load<Texture2D>("Sprites/ship");
         }
 
         public void Update()
@@ -34,7 +61,7 @@ namespace AlkonostXNAGame.AlkonostDataStructure.Data
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(texture, position, Color.White);
+            spriteBatch.Draw(playerTexture, position, Color.White);
         }
 
         private void MoveUp()
@@ -47,7 +74,7 @@ namespace AlkonostXNAGame.AlkonostDataStructure.Data
 
         private void MoveDown()
         {
-            if (this.position.Y + (MovementSpeed * velocity) <= 645 - texture.Height)
+            if (this.position.Y + (MovementSpeed * velocity) <= 645 - playerTexture.Height)
             {
                 this.position.Y += MovementSpeed * velocity;
             }
@@ -55,7 +82,7 @@ namespace AlkonostXNAGame.AlkonostDataStructure.Data
 
         private void MoveRight()
         {
-            if(this.position.X + (MovementSpeed * velocity) <= 700 - texture.Width)
+            if(this.position.X + (MovementSpeed * velocity) <= 700 - playerTexture.Width)
             {
                 this.position.X += MovementSpeed * velocity;
             }

@@ -2,18 +2,15 @@
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-
+using AlkonostXNAGame.AlkonostDataStructure.Data;
+using AlkonostXNAGame.XNAData.GameGraphic;
+using AlkonostXNAGame.XNAData.CharacterAnimation;
 
 namespace AlkonostXNAGame.XNAData
 {
-    using AlkonostDataStructure.Data;
-    using GameGraphic;
-
-
-
     class ScreenMap : GameScreen
     {
-        Player player;
+        KnightAnimation player;
         KeyboardState keyState;
 
         Map map;
@@ -22,19 +19,18 @@ namespace AlkonostXNAGame.XNAData
         public ScreenMap()
         {
             map = new Map();
-            player = new Player();
         }
 
         public override void Initialize()
         {
-            player.Initialize();
             base.Initialize();
         }
 
         public override void LoadContent(ContentManager content)
         {
-            player.LoadContent(content);
             base.LoadContent(content);
+            player = new KnightAnimation(content.Load<Texture2D>("Sprites/SpriteSheet"), 1, 32, 48);
+            player.Position = new Vector2(400, 300);
             Tiles.Content = content; //map class
             if (font == null)
             {
@@ -73,8 +69,7 @@ namespace AlkonostXNAGame.XNAData
 
         public override void Update(GameTime gameTime)
         {
-            player.Update();
-
+            player.HandleSpriteMovement(gameTime);
             //exit from this window
             if (keyState.IsKeyDown(Keys.Z)) ScreenManager.Instance.AddScreen(new SplashScreen());
         }
@@ -82,15 +77,15 @@ namespace AlkonostXNAGame.XNAData
         public override void Draw(SpriteBatch spriteBatch)
         {
             map.Draw(spriteBatch);
-            player.Draw(spriteBatch);
-            float g = player.position.X;
+            spriteBatch.Draw(player.PlayerTexture, player.Position, player.SourceRect, Color.White, 0f, player.Origin, 1.0f, SpriteEffects.None, 0);
+            float g = player.Position.X;
             string h = g.ToString();
-            float g2 = player.position.Y;
+            float g2 = player.Position.Y;
             string h2 = g2.ToString();
 
-            if (player.position.X == 354 && player.position.Y == 354)
-            {    
-                spriteBatch.DrawString(font, "Collision", new Vector2(750, 150), Color.Blue);   
+            if (player.Position.X == 354 && player.Position.Y == 354)
+            {
+                spriteBatch.DrawString(font, "Collision", new Vector2(750, 150), Color.Blue);
             }
 
             spriteBatch.DrawString(font, h, new Vector2(750, 50), Color.Blue);

@@ -8,16 +8,16 @@ namespace AlkonostXNAGame.XNAData
    public class SplashScreen : GameScreen
     {
        KeyboardState keyState;
-       Texture2D menueImage;
-       public static AlkonostGame game1 = new AlkonostGame();
+       Texture2D menuImage;
+       public static AlkonostGame game = new AlkonostGame();
 
 
        public override void LoadContent(ContentManager Content)
        {
            base.LoadContent(Content);
-           if (menueImage == null) menueImage = Content.Load<Texture2D>("Sprites/MenueBackground");
+           if (menuImage == null) menuImage = Content.Load<Texture2D>("Sprites/MenueBackground");
        }
-
+        
        public override void UnloadContent()
        {
            base.UnloadContent();
@@ -35,7 +35,7 @@ namespace AlkonostXNAGame.XNAData
        public override void Draw(SpriteBatch spriteBatch)
        {
 
-           spriteBatch.Draw(menueImage, new Vector2(0, 0), Color.White);
+           spriteBatch.Draw(menuImage, new Vector2(0, 0), Color.White);
          
        }
     }
