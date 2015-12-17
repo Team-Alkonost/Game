@@ -6,7 +6,6 @@ namespace AlkonostXNAGame.XNAData
 {
     public class GameScreen
     {
-        
         protected ContentManager content;
 
 
@@ -28,7 +27,5 @@ namespace AlkonostXNAGame.XNAData
         public virtual void Draw(SpriteBatch spriteBatch)
         {
         }
-
-
     }
 }

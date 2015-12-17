@@ -27,7 +27,7 @@ namespace AlkonostXNAGame.XNAData
        {
            keyState = Keyboard.GetState();
            if (keyState.IsKeyDown(Keys.Enter))
-               ScreenManeger.Instance.AddScreen(new TitleScreen());              
+               ScreenManager.Instance.AddScreen(new TitleScreen());              
 
        }
 

@@ -7,10 +7,10 @@ namespace AlkonostXNAGame.AlkonostDataStructure.Data
 {
     public class Dager : Item
     {
-        private const double DefautMovementBonus = 0;
-        private const double DefautDamage = 10;
-        private const double DefautArmor = 0;
-        private const double DefautHealth = 0;
+        private const float DefautMovementBonus = 0;
+        private const float DefautDamage = 10;
+        private const float DefautArmor = 0;
+        private const float DefautHealth = 0;
         private const int DefautCritChannce = 2;
 
         public Dager() : base(DefautDamage, DefautArmor, DefautHealth, DefautMovementBonus, DefautCritChannce)

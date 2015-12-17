@@ -2,9 +2,9 @@
 {
     public  interface ICharacter
     {
-        double Health { get; }
-        double Damage { get; }
-        double Armor { get; }
-        double Movement { get; }
+        float HealthPoints { get; }
+        float AttackPoints { get; }
+        float ArmorPoints { get; }
+        float MovementSpeed { get; }
     }
 }

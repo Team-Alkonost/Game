@@ -2,10 +2,10 @@
 {
     public interface IItem
     {
-        double BonusDamage { get; }
-        double BonusArmor { get; }
-        double BonusHealth { get; }
-        double BonusMovement { get; }
+        float BonusDamage { get; }
+        float BonusArmor { get; }
+        float BonusHealth { get; }
+        float BonusMovement { get; }
         int BonusCritChance { get; }
     }
 }

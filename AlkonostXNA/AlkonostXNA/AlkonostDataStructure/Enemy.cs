@@ -7,7 +7,7 @@ namespace AlkonostXNAGame.AlkonostDataStructure
     {
         private IItem weapon;
 
-        protected Enemy(double health, double damage, double armor, double movement, IItem weapon) 
+        protected Enemy(float health, float damage, float armor, float movement, IItem weapon) 
             : base (health, damage, armor, movement)
         {
             this.weapon = weapon;       
@@ -29,12 +29,12 @@ namespace AlkonostXNAGame.AlkonostDataStructure
             }
         }
 
-        public override double Defend()
+        public override float Defend()
         {
             throw new NotImplementedException();
         }
 
-        public override double Hit()
+        public override float Hit()
         {
             throw new NotImplementedException();
         }

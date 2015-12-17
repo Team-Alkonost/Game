@@ -5,90 +5,90 @@ namespace AlkonostXNAGame.AlkonostDataStructure
 {
     public abstract class Character : ICharacter, IAttackable
     {
-        private double armor;
-        private double damage;
-        private double health;
-        private double movement;
+        private float armorPoints;
+        private float attackPoints;
+        private float healthPoints;
+        private float movementSpeed;
             
-        protected Character(double health, double damage, double armor, double movement)
+        protected Character(float healthPoints, float attackPoints, float armorPoints, float movementSpeed)
         {
-            this.Health = health;
-            this.Damage = damage;
-            this.Armor = armor;
-            this.Movement = movement;
+            this.HealthPoints = healthPoints;
+            this.AttackPoints = attackPoints;
+            this.ArmorPoints = armorPoints;
+            this.MovementSpeed = movementSpeed;
         }           
 
-        public double Armor
+        public float ArmorPoints
         {
             get
             {
-                return this.armor;
+                return this.armorPoints;
             }
             protected set
             {
                 if(value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("Armor cannot be negative");
+                    throw new ArgumentOutOfRangeException("ArmorPoints cannot be negative");
                 }
-                this.armor = value;
+                this.armorPoints = value;
             }            
         }
 
-        public double Damage
+        public float AttackPoints
         {
             get
             {
-                return this.damage;
+                return this.attackPoints;
             }
             protected set
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("Damage cannot be negative");
+                    throw new ArgumentOutOfRangeException("AttackPoints cannot be negative");
                 }
-                this.damage = value;
+                this.attackPoints = value;
             }
         }
 
-        public double Health
+        public float HealthPoints
         {
             get
             {
-                return this.health;
+                return this.healthPoints;
             }
             protected set
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("Health cannot be negative");
+                    throw new ArgumentOutOfRangeException("HealthPoints cannot be negative");
                 }
-                this.health = value;
+                this.healthPoints = value;
             }
         }
 
-        public double Movement
+        public float MovementSpeed
         {
             get
             {
-                return this.movement;
+                return this.movementSpeed;
             }
             protected set
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("Movement cannot be negative");
+                    throw new ArgumentOutOfRangeException("MovementSpeed cannot be negative");
                 }
-                this.movement = value;
+                this.movementSpeed = value;
             }
         }
 
 
-        public abstract double Hit();
+        public abstract float Hit();
 
-        public abstract double Defend();
+        public abstract float Defend();
 
-        protected abstract double CalculateHealth();
+        protected abstract float CalculateHealth();
 
-        protected abstract double CalculateAttackPoints();
+        protected abstract float CalculateAttackPoints();
     }
 }

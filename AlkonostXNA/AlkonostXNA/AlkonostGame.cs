@@ -4,12 +4,6 @@ using Microsoft.Xna.Framework.Input;
 
 namespace AlkonostXNAGame.XNAData
 {
-    /// <summary>
-    /// This is the main type for your game
-    /// </summary>
-    /// 
-
-
     public class AlkonostGame : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
@@ -18,9 +12,9 @@ namespace AlkonostXNAGame.XNAData
         public AlkonostGame()
         {
             graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content"; graphics.PreferredBackBufferWidth = 1000;
-              this.Window.Title = "Alkonost: Siren Of the Sky";
-
+            Content.RootDirectory = "Content";
+            graphics.PreferredBackBufferWidth = 1000;
+            this.Window.Title = "Alkonost: Siren Of the Sky";
         }
 
         /// <summary>
@@ -32,14 +26,12 @@ namespace AlkonostXNAGame.XNAData
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-      
 
-            ScreenManeger.Instance.Initialize();
-
-            ScreenManeger.Instance.Dimensions = new Vector2(1366, 768);
+            ScreenManager.Instance.Initialize();
+            ScreenManager.Instance.Dimensions = new Vector2(1366, 768);
             graphics.PreferredBackBufferHeight = 700;
-           // graphics.PreferredBackBufferWidth = (int)ScreenManeger.Instance.Dimensions.X;
-           // graphics.PreferredBackBufferWidth = (int)ScreenManeger.Instance.Dimensions.Y;
+            // graphics.PreferredBackBufferWidth = (int)ScreenManeger.Instance.Dimensions.X;
+            // graphics.PreferredBackBufferWidth = (int)ScreenManeger.Instance.Dimensions.Y;
             graphics.ApplyChanges();
 
             base.Initialize();
@@ -53,9 +45,9 @@ namespace AlkonostXNAGame.XNAData
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-         
+
             // TODO: use this.Content to load your game content here
-              ScreenManeger.Instance.LoadContent(Content);
+            ScreenManager.Instance.LoadContent(Content);
 
         }
 
@@ -81,10 +73,11 @@ namespace AlkonostXNAGame.XNAData
                 this.Exit();
 
             // TODO: Add your update logic here
-            ScreenManeger.Instance.Update(gameTime);
+            ScreenManager.Instance.Update(gameTime);
+
             base.Update(gameTime);
         }
-  
+
 
         /// <summary>
         /// This is called when the game should draw itself.
@@ -96,7 +89,7 @@ namespace AlkonostXNAGame.XNAData
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
-            ScreenManeger.Instance.Draw(spriteBatch);
+            ScreenManager.Instance.Draw(spriteBatch);
             spriteBatch.End();
             base.Draw(gameTime);
         }

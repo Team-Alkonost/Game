@@ -4,7 +4,7 @@ namespace AlkonostXNAGame.AlkonostDataStructure.Data
 { 
     public abstract class Item : IItem
     {
-        protected Item (double damage, double armor, double health, double movement, int critChance)
+        protected Item (float damage, float armor, float health, float movement, int critChance)
         {
             this.BonusHealth = health;
             this.BonusDamage = damage;
@@ -13,10 +13,10 @@ namespace AlkonostXNAGame.AlkonostDataStructure.Data
             this.BonusCritChance = critChance;
         }
 
-        public double BonusDamage { get; private set; }
-        public double BonusArmor { get; private set; }
-        public double BonusHealth { get; private set; }
-        public double BonusMovement { get; private set; }
+        public float BonusDamage { get; private set; }
+        public float BonusArmor { get; private set; }
+        public float BonusHealth { get; private set; }
+        public float BonusMovement { get; private set; }
         public int BonusCritChance{ get; private set; }
     }
 }

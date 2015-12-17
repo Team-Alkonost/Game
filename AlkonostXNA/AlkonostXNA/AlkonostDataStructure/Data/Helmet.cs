@@ -7,10 +7,10 @@ namespace AlkonostXNAGame.AlkonostDataStructure.Data
 {
     public class Helmet : Item
     {
-        private const double DefautMovementBonus = 0;
-        private const double DefautDamage = 0;
-        private const double DefautArmor = 35;
-        private const double DefautHealth = 15;
+        private const float DefautMovementBonus = 0;
+        private const float DefautDamage = 0;
+        private const float DefautArmor = 35;
+        private const float DefautHealth = 15;
         private const int DefautCritChannce = 0;
 
         public Helmet() : base(DefautDamage, DefautArmor, DefautHealth, DefautMovementBonus, DefautCritChannce)

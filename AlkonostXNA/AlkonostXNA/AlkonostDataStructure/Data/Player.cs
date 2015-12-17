@@ -1,19 +1,17 @@
 ﻿using System.Collections.Generic;
-using AlkonostXNAGame.XNAData;
-
 namespace AlkonostXNAGame.AlkonostDataStructure.Data
 {
     public partial class Player : Character
     {
-        private const double DefautHealth = 100;
-        private const double DefautDamage = 50;
-        private const double DefautArmor = 10;
-        private const double DefautMovement = 100;
-        private const double MovementEffect = 0.05;        
+        private const float DefaultHealthPoints = 100;
+        private const float DefaultAttackPoints = 50;
+        private const float DefaultArmorPoints = 10;
+        private const float DefaultMovementSpeed = 100;
+        private const float MovementEffect = 0.05f;        
         private HashSet<Item> inventory;
 
         public Player() 
-            : base(DefautHealth, DefautDamage, DefautArmor, DefautMovement)
+            : base(DefaultHealthPoints, DefaultAttackPoints, DefaultArmorPoints, DefaultMovementSpeed)
         {
             this.inventory = new HashSet<Item>();
         }
@@ -31,39 +29,42 @@ namespace AlkonostXNAGame.AlkonostDataStructure.Data
             inventory.Add(item);            
         }    
 
-        public override double Hit()
+        public override float Hit()
         {
-            double damage =  this.CalculateAttackPoints();
+            float damage =  this.CalculateAttackPoints();
             return damage;
         }
-        protected override double CalculateAttackPoints()
+
+        protected override float CalculateAttackPoints()
         {
-            double sumOfDamageOfItems = 0;
-            double finalDamage = 0;
+            float sumOfDamageOfItems = 0;
+            float finalDamage = 0;
             foreach (Item item in Inventory)
             {               
                 sumOfDamageOfItems += item.BonusDamage + (item.BonusMovement * MovementEffect);
             }
-            finalDamage += this.Damage + sumOfDamageOfItems;
+
+            finalDamage += this.AttackPoints + sumOfDamageOfItems;
 
             return finalDamage;            
         }
 
-        public override double Defend()
+        public override float Defend()
         {
-            double totalHealth = this.CalculateHealth();
+            float totalHealth = this.CalculateHealth();
             return totalHealth;
         }
 
-        protected override double CalculateHealth()
+        protected override float CalculateHealth()
         {
-            double finalHealth = 0;
-            double itemHealthBonus = 0;
+            float finalHealth = 0;
+            float itemHealthBonus = 0;
             foreach (Item item in Inventory)
             {
                 itemHealthBonus += item.BonusHealth + item.BonusArmor +(item.BonusMovement * MovementEffect);
             }
-            return finalHealth += this.Damage + itemHealthBonus;
+
+            return finalHealth += this.AttackPoints + itemHealthBonus;
         }
     }
 }

@@ -31,8 +31,8 @@ namespace AlkonostXNAGame.XNAData
         public override void Update(GameTime gameTime)
         {
             keyState = Keyboard.GetState();
-            if (keyState.IsKeyDown(Keys.Z)) ScreenManeger.Instance.AddScreen(new SplashScreen());
-            if (keyState.IsKeyDown(Keys.M)) ScreenManeger.Instance.AddScreen(new ScreenMap());
+            if (keyState.IsKeyDown(Keys.Z)) ScreenManager.Instance.AddScreen(new SplashScreen());
+            if (keyState.IsKeyDown(Keys.M)) ScreenManager.Instance.AddScreen(new ScreenMap());
         }
 
         public override void Draw(SpriteBatch spriteBatch)

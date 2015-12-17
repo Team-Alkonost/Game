@@ -7,10 +7,10 @@ namespace AlkonostXNAGame.AlkonostDataStructure.Data
 {
     public class Excalibur : Item
     {
-        private const double DefautMovementBonus = 0;
-        private const double DefautDamage = 20;
-        private const double DefautArmor = 0;
-        private const double DefautHealth = 0;
+        private const float DefautMovementBonus = 0;
+        private const float DefautDamage = 20;
+        private const float DefautArmor = 0;
+        private const float DefautHealth = 0;
         private const int DefautCritChannce = 1;
 
         public Excalibur() : base(DefautDamage, DefautArmor, DefautHealth, DefautMovementBonus, DefautCritChannce)

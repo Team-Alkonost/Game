@@ -2,11 +2,11 @@
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Graphics; 
+using Microsoft.Xna.Framework.Graphics;
 
 namespace AlkonostXNAGame.XNAData
 {
-    public class ScreenManeger
+    public class ScreenManager
     {
 
         #region Variables
@@ -14,12 +14,12 @@ namespace AlkonostXNAGame.XNAData
         /// <summary>
         /// Screenmaneger Instance
         /// </summary>
-         
-        private static ScreenManeger instance;
+
+        private static ScreenManager instance;
         /// <summary>
         /// Creating custom contentManeger
         /// </summary>
-        
+
         ContentManager content;
 
         GameScreen currentScreen;
@@ -44,9 +44,9 @@ namespace AlkonostXNAGame.XNAData
 
 
         Vector2 dimentions;
-      /// <summary>
-      /// Let's us know if we should transition or not
-      /// </summary>
+        /// <summary>
+        /// Let's us know if we should transition or not
+        /// </summary>
         bool transition;
 
         FadeAnimation fade = new FadeAnimation();
@@ -57,19 +57,19 @@ namespace AlkonostXNAGame.XNAData
 
         #region Properties
 
-      public static ScreenManeger Instance
-        {                 
+        public static ScreenManager Instance
+        {
             get
             {
-                if (instance == null) instance = new ScreenManeger();
+                if (instance == null) instance = new ScreenManager();
                 return instance;
             }
 
         }
 
-        public Vector2 Dimensions 
+        public Vector2 Dimensions
         {
-            get  {return dimentions; }
+            get { return dimentions; }
             set { dimentions = value; }
         }
 
@@ -78,39 +78,41 @@ namespace AlkonostXNAGame.XNAData
         #region MainMethods 
 
 
-        public void AddScreen(GameScreen screen) 
+        public void AddScreen(GameScreen screen)
         {
             transition = true;
             newScreen = screen;
-            fade.IsActive= true;
+            newScreen.Initialize();
+            fade.IsActive = true;
             fade.Alpha = 0.0f;
             fade.ActiveteValue = 1.0f;
         }
 
-        public void Initialize() 
+        public void Initialize()
         {
             currentScreen = new SplashScreen();
             fade = new FadeAnimation();  //new2
+            currentScreen.Initialize();
         }
         public void LoadContent(ContentManager Content)
         {
-            content = new ContentManager(Content.ServiceProvider,"Content");
+            content = new ContentManager(Content.ServiceProvider, "Content");
             currentScreen.LoadContent(Content);
 
             fadeTexture = content.Load<Texture2D>("Und");
             fade.LoadContent(content, fadeTexture, "", Vector2.Zero);
             fade.Scale = dimentions.X;
-
-
         }
+
         public void Update(GameTime gameTime)
         {
             if (!transition)
                 currentScreen.Update(gameTime);
-            else 
+            else
                 Transition(gameTime);  //2
         }
-        public void Draw(SpriteBatch spriteBatch) 
+
+        public void Draw(SpriteBatch spriteBatch)
         {
             currentScreen.Draw(spriteBatch);
             if (transition)  //2
@@ -119,23 +121,23 @@ namespace AlkonostXNAGame.XNAData
 
         #endregion
 
-         #region PrivateMethods
-          private void Transition(GameTime gameTime)
-           {
-               fade.Update(gameTime);
-               if (fade.Alpha == 1.0f && fade.Timer.TotalSeconds == 1.0f)
-               {
-                   screenStack.Push(newScreen);
-                   currentScreen.UnloadContent();
-                   currentScreen = newScreen;
-                   currentScreen.LoadContent(content);
-               }
-               else if (fade.Alpha == 0.0f)
-              {
-                  transition = false;
-                  fade.IsActive = false;
-              }
-           }
-         #endregion
+        #region PrivateMethods
+        private void Transition(GameTime gameTime)
+        {
+            fade.Update(gameTime);
+            if (fade.Alpha == 1.0f && fade.Timer.TotalSeconds == 1.0f)
+            {
+                screenStack.Push(newScreen);
+                currentScreen.UnloadContent();
+                currentScreen = newScreen;
+                currentScreen.LoadContent(content);
+            }
+            else if (fade.Alpha == 0.0f)
+            {
+                transition = false;
+                fade.IsActive = false;
+            }
+        }
+        #endregion
     }
 }
