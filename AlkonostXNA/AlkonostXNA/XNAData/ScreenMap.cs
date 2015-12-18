@@ -106,28 +106,28 @@ namespace AlkonostXNAGame.XNAData
                 {
                   matrix1[11, 11] = 1;  //update matrix
                   this.map.Generate(matrix1, 32);  //reload matrixx
-                  Colision = "Enemy ded "; enemyHeroes++;
+                  Colision = "Enemy died "; enemyHeroes++;
                 }
             if (g == 0&&g2 == 0)
                 if (matrix1[0, 0] != 1)
                 {
                     matrix1[0, 0] = 1;  //update matrix
                     this.map.Generate(matrix1, 32);  //reload matrixx
-                    Colision = "Enemy ded "; enemyHeroes++;
+                    Colision = "Enemy died "; enemyHeroes++;
                 }
             if (g == 0&&g2 == 15)
                 if ( matrix1[15, 0] != 1)
                 {
                     matrix1[15, 0] = 1;  //update matrix               
                     this.map.Generate(matrix1, 32);  //reload matrixx
-                    Colision = "Enemy ded "; enemyHeroes++;
+                    Colision = "Enemy died "; enemyHeroes++;
                 }
             if (g == 0&&g2 == 18)
                 if (matrix1[18, 0] != 1)
                 {
                     matrix1[18, 0] = 1;   //update matrix       
                     this.map.Generate(matrix1, 32);  //reload matrixx
-                    Colision = "Enemy ded "; enemyHeroes++;
+                    Colision = "Enemy died "; enemyHeroes++;
                 }
             //--Load from file
             //spriteBatch.DrawString(font, gX, new Vector2(750, 50), Color.Blue);

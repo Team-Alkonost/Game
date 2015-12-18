@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+
 namespace AlkonostXNAGame.AlkonostDataStructure.Data
 {
     public partial class Player : Character
@@ -58,11 +60,7 @@ namespace AlkonostXNAGame.AlkonostDataStructure.Data
         protected override float CalculateHealth()
         {
             float finalHealth = 0;
-            float itemHealthBonus = 0;
-            foreach (Item item in Inventory)
-            {
-                itemHealthBonus += item.BonusHealth + item.BonusArmor +(item.BonusMovement * MovementEffect);
-            }
+            float itemHealthBonus = Inventory.Sum(item => item.BonusHealth + item.BonusArmor + (item.BonusMovement*MovementEffect));
 
             return finalHealth += this.AttackPoints + itemHealthBonus;
         }

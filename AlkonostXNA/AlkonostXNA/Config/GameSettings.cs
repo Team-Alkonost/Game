@@ -15,5 +15,7 @@ namespace AlkonostXNAGame.Config
         public const float DefaultVelocity = 1f;
         public const float DefaultPlayerMovementSpeed = 2f;
         public readonly static Vector2 StartingPlayerPosition = new Vector2(300, 300);
+
+        
     }
 }

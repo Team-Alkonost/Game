@@ -78,8 +78,8 @@
     <Compile Include="AlkonostDataStructure\Data\HelpPackage.cs" />
     <Compile Include="AlkonostDataStructure\Data\WhetStone.cs" />
     <Compile Include="AlkonostDataStructure\Data\Wine.cs" />
-    <Compile Include="AlkonostDataStructure\Character.cs" />
-    <Compile Include="AlkonostDataStructure\Enemy.cs" />
+    <Compile Include="AlkonostDataStructure\Models\Character.cs" />
+    <Compile Include="AlkonostDataStructure\Models\Enemy.cs" />
     <Compile Include="AlkonostDataStructure\Data\Gauntlet.cs" />
     <Compile Include="AlkonostDataStructure\Data\Axe.cs" />
     <Compile Include="AlkonostDataStructure\Data\Boots.cs" />
