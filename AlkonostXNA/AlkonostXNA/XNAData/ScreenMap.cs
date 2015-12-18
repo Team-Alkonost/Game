@@ -21,27 +21,28 @@ namespace AlkonostXNAGame.XNAData
         Player player;
         SpriteFont font;
         string Colision="";
+        int enemyHeroes = 0;
         int[,] matrix1 = new int[,]{
                 {4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
                 {1,2,2,2,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,2,2,2,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,2,2,2,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2,2,2,1},
-                {1,2,2,2,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2,2,2,1},
-                {1,2,2,2,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2,2,2,1},
-                {1,2,2,2,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2,2,2,1},
-                {1,2,2,2,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2,2,2,1},
-                {1,2,2,2,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2,2,2,1},
-                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
-                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
-                {1,1,1,1,1,1,1,1,1,1,1,4,1,1,1,2,2,2,2,2,2,1},
+                {1,2,2,2,2,2,2,2,2,1,1,5,7,1,1,2,2,2,2,2,2,1},
+                {1,2,2,2,2,2,2,2,2,1,1,6,2,1,1,2,2,2,2,2,2,1},
+                {1,5,5,5,5,5,5,5,5,1,1,1,1,1,1,2,2,2,2,2,2,1},
+                {1,6,6,6,6,6,6,6,6,1,1,1,1,1,1,2,2,2,2,2,2,1},
+                {1,5,5,5,5,5,5,5,5,1,1,1,1,1,1,2,2,2,2,2,2,1},
+                {1,6,6,6,6,6,6,6,6,1,1,1,1,1,1,2,2,2,2,2,2,1},
+                {1,1,1,7,1,1,5,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
+                {1,1,1,1,1,1,6,1,1,1,1,4,1,1,1,2,2,2,2,2,2,1},
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,1,2,2,2,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
+                {4,1,2,2,2,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,1,2,2,2,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
-                {1,1,2,2,2,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
-                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
-                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
-                {4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+                {1,1,5,1,1,1,1,5,1,1,1,1,1,1,1,5,5,5,5,5,5,1},
+                {4,1,6,2,1,1,1,6,2,1,1,1,1,1,1,6,6,6,6,6,6,1},
+                {7,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
             };
 
         public ScreenMap()
@@ -85,7 +86,7 @@ namespace AlkonostXNAGame.XNAData
             if (player.position.X <= 0) player.position.X = 0;
             if (player.position.X >= 700-20 ) player.position.X = 700 - 20;
             if (player.position.Y <= 0) player.position.Y = 0;
-            if (player.position.Y >= 645 - 20) player.position.Y = 645 - 20;
+            if (player.position.Y >= 670 ) player.position.Y = 670;
             //exit from this window
           //  if (keyState.IsKeyDown(Keys.Z)) ScreenManeger.Instance.AddScreen(new SplashScreen());
         }
@@ -100,30 +101,40 @@ namespace AlkonostXNAGame.XNAData
             int g2 = (int)player.position.Y / 32;
             string gY = g2.ToString();
            //--Load from file
-            if (g == 11)
-                if (g2 == 10)
+            if (g == 11 && g2 == 11)
+                if (matrix1[11, 11] != 1)
                 {
                   matrix1[11, 11] = 1;  //update matrix
                   this.map.Generate(matrix1, 32);  //reload matrixx
-                  Colision= "Enemy ded ";   }
-            if (g == 0)
-                if (g2 == 0)
+                  Colision = "Enemy ded "; enemyHeroes++;
+                }
+            if (g == 0&&g2 == 0)
+                if (matrix1[0, 0] != 1)
                 {
                     matrix1[0, 0] = 1;  //update matrix
                     this.map.Generate(matrix1, 32);  //reload matrixx
-                    Colision = "Enemy ded ";
+                    Colision = "Enemy ded "; enemyHeroes++;
                 }
-            if (g == 0)
-                if (g2 == 21)
+            if (g == 0&&g2 == 15)
+                if ( matrix1[15, 0] != 1)
                 {
-                    matrix1[0, 21] = 1;  //update matrix
+                    matrix1[15, 0] = 1;  //update matrix               
                     this.map.Generate(matrix1, 32);  //reload matrixx
-                    Colision = "Enemy ded ";
+                    Colision = "Enemy ded "; enemyHeroes++;
+                }
+            if (g == 0&&g2 == 18)
+                if (matrix1[18, 0] != 1)
+                {
+                    matrix1[18, 0] = 1;   //update matrix       
+                    this.map.Generate(matrix1, 32);  //reload matrixx
+                    Colision = "Enemy ded "; enemyHeroes++;
                 }
             //--Load from file
-            spriteBatch.DrawString(font, gX, new Vector2(750, 50), Color.Blue);
-            spriteBatch.DrawString(font, gY, new Vector2(750, 100), Color.Blue);
-            spriteBatch.DrawString(font, Colision, new Vector2(750, 150), Color.Blue); 
+            //spriteBatch.DrawString(font, gX, new Vector2(750, 50), Color.Blue);
+           // spriteBatch.DrawString(font, gY, new Vector2(750, 100), Color.Blue);
+            spriteBatch.DrawString(font, Colision, new Vector2(750, 150), Color.Blue);
+            spriteBatch.DrawString(font, "Enemy killed:" + enemyHeroes.ToString(), new Vector2(750, 200), Color.Blue);
+            if (enemyHeroes == 4) spriteBatch.DrawString(font, "Game over !", new Vector2(750, 300), Color.Red); 
         }
 
      
