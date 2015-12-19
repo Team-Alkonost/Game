@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using AlkonostXNAGame.XNAData.CharacterAnimation;
+using Microsoft.Xna.Framework.Media;
 
 namespace AlkonostXNAGame.XNAData
 {
@@ -9,6 +10,7 @@ namespace AlkonostXNAGame.XNAData
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        private Song song;
 
         public AlkonostGame()
         {
@@ -46,8 +48,10 @@ namespace AlkonostXNAGame.XNAData
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            ScreenManager.Instance.LoadContent(Content);           
-            
+            ScreenManager.Instance.LoadContent(Content);
+            song = Content.Load<Song>("ABSTRACT_ATMOSPHERE");
+            MediaPlayer.Play(song);
+
             // TODO: use this.Content to load your game content here
 
 
