@@ -7,10 +7,10 @@ namespace AlkonostXNAGame.AlkonostDataStructure
     {
         private float armorPoints;
         private float attackPoints;
-        private float healthPoints;
+        private int healthPoints;
         private float movementSpeed;
             
-        protected Character(float healthPoints, float attackPoints, float armorPoints, float movementSpeed)
+        protected Character(int healthPoints, float attackPoints, float armorPoints, float movementSpeed)
         {
             this.HealthPoints = healthPoints;
             this.AttackPoints = attackPoints;
@@ -50,7 +50,7 @@ namespace AlkonostXNAGame.AlkonostDataStructure
             }
         }
 
-        public float HealthPoints
+        public int HealthPoints
         {
             get
             {
@@ -58,11 +58,13 @@ namespace AlkonostXNAGame.AlkonostDataStructure
             }
             protected set
             {
-                if (value < 0)
+                if (value >= 0)
                 {
-                    throw new ArgumentOutOfRangeException("HealthPoints cannot be negative");
+                    // th=row new ArgumentOutOfRangeException("HealthPoints cannot be negative");
+                    this.healthPoints = value;
                 }
-                this.healthPoints = value;
+                else this.healthPoints = 0;
+                
             }
         }
 
@@ -83,11 +85,11 @@ namespace AlkonostXNAGame.AlkonostDataStructure
         }
 
 
-        public abstract float Hit();
+        public abstract int Hit();
 
         public abstract float Defend();
 
-        protected abstract float CalculateHealth();
+        protected abstract int CalculateHealth();
 
         protected abstract float CalculateAttackPoints();
     }

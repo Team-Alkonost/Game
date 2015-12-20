@@ -102,9 +102,9 @@
     <Compile Include="Config\GameSettings.cs" />
     <Compile Include="XNAData\Animation.cs" />
     <Compile Include="XNAData\FadeAnimation.cs" />
-    <Compile Include="XNAData\GameGraphic\DrawRectangle.cs" />
     <Compile Include="XNAData\GameGraphic\Map.cs" />
     <Compile Include="XNAData\GameGraphic\Tiles.cs" />
+    <Compile Include="XNAData\GameoverScreen.cs" />
     <Compile Include="XNAData\GameScreen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GameEntryPoint.cs" />

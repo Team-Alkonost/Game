@@ -2,7 +2,7 @@
 {
     public  interface ICharacter
     {
-        float HealthPoints { get; }
+        int HealthPoints { get; }
         float AttackPoints { get; }
         float ArmorPoints { get; }
         float MovementSpeed { get; }

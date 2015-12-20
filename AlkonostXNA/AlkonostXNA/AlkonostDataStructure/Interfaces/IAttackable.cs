@@ -7,7 +7,7 @@ namespace AlkonostXNAGame.AlkonostDataStructure.Interfaces
 {
     public interface IAttackable
     {
-        float Hit();
+        int Hit();
         float Defend();
     }
 }

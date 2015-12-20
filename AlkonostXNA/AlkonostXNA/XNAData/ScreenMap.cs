@@ -24,28 +24,31 @@ namespace AlkonostXNAGame.XNAData
 
         SpriteFont font;
         string Colision="";
+        string case1 = "";
         int enemyHeroes = 0;
+        int playerlife = 100;
+        //World map
         int[,] matrix1 = new int[,]{
-                {4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+                {4,1,1,1,1,1,1,1,1,1,1,1,4,1,1,1,1,1,1,1,1,1},
                 {1,2,2,2,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,2,2,2,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,2,2,2,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,2,2,2,2,2,2,2,2,1,1,5,7,1,1,2,2,2,2,2,2,1},
-                {1,2,2,2,2,2,2,2,2,1,1,6,2,1,1,2,2,2,2,2,2,1},
+                {1,2,2,2,2,2,2,2,2,4,1,6,2,1,1,2,2,2,2,2,2,1},
                 {1,5,5,5,5,5,5,5,5,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,6,6,6,6,6,6,6,6,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,5,5,5,5,5,5,5,5,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,6,6,6,6,6,6,6,6,1,1,1,1,1,1,2,2,2,2,2,2,1},
-                {1,1,1,7,1,1,5,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
+                {1,1,4,7,1,1,5,1,1,1,1,4,1,1,1,2,2,2,2,2,2,1},
                 {1,1,1,1,1,1,6,1,1,1,1,4,1,1,1,2,2,2,2,2,2,1},
+                {4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
-                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
-                {1,1,2,2,2,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
+                {1,1,2,2,2,1,1,4,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {4,1,2,2,2,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
                 {1,1,2,2,2,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,1},
-                {1,1,5,1,1,1,1,5,1,1,1,1,1,1,1,5,5,5,5,5,5,1},
-                {4,1,6,2,1,1,1,6,2,1,1,1,1,1,1,6,6,6,6,6,6,1},
-                {7,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+                {4,1,5,1,1,1,1,5,1,1,1,1,1,1,4,5,5,5,5,5,5,1},
+                {4,4,6,2,1,1,1,6,2,1,1,1,1,1,4,6,6,6,6,6,6,1},
+                {7,1,1,1,1,1,1,1,1,7,1,1,1,1,1,1,1,1,1,1,1,1},
             };
 
         public ScreenMap()
@@ -99,56 +102,42 @@ namespace AlkonostXNAGame.XNAData
         public override void Draw(SpriteBatch spriteBatch)
         {
             map.Draw(spriteBatch);
-         //  g= mappoint1.PointX;
-
-           // spriteBatch.Draw(texture, position, Color.White);
+            
             player.Draw(spriteBatch);
-            int g = (int)player.position.X / 32;
-            string gX = g.ToString();
-            int g2 = (int)player.position.Y / 32;
-            string gY = g2.ToString();
+            int pointX = (int)player.position.X / 32;
+            string gX = pointX.ToString();
+            int pointY = (int)player.position.Y / 32;
+            string gY = pointY.ToString();
            //--Load from file
-            if (g==11&& g==11)
-                if (matrix1[11, 11] != 1)
-                {
-                  matrix1[11, 11] = 1;  //update matrix
-                  this.map.Generate(matrix1, 32);  //reload matrixx
-                  Colision = "Enemy ded ,Life:" + player.Hit().ToString(); 
-                  enemyHeroes++;
-                }
-            if (g == 0 && g2 == 0)
-                if (matrix1[0, 0] != 1)
-                {
-                    matrix1[0, 0] = 1;  //update matrix
-                    this.map.Generate(matrix1, 32);  //reload matrixx
-                    Colision = "Enemy ded ,Life:" + player.Hit().ToString();
-                    
+               if (matrix1[pointY, pointX] == 4)  //4=enemy
+                {                
+                    matrix1[pointY, pointX] = 1;    //update matrix  
+                    case1 = "Enamy is ded";
+                    Colision = "Life: " + player.Hit().ToString();
+                    playerlife=player.Hit();                
                     enemyHeroes++;
-                    
+                   this.map.Generate(matrix1, 32);  //reload matrixx          
                 }
-            if (g == 0 && g2 == 15)
-                if ( matrix1[15, 0] != 1)
-                {
-                    matrix1[15, 0] = 1;  //update matrix               
-                    this.map.Generate(matrix1, 32);  //reload matrixx
-                    Colision = "Enemy ded ,Life: " + player.Hit().ToString();
-                    enemyHeroes++;
-                }
-            if (g == 0 && g2 == 18)
-                if (matrix1[18, 0] != 1)
-                {
-                    matrix1[18, 0] = 1;   //update matrix       
-                    this.map.Generate(matrix1, 32);  //reload matrixx
-                    Colision = "Enemy ded ,Life:" + player.Hit().ToString(); 
-                    
-                    enemyHeroes++;
-                }
+               if (matrix1[pointY, pointX] == 7)  // 4= open case
+               {
+                   matrix1[pointY, pointX] = 1;    //update matrix                 
+                   case1 = "You find Life";                   
+                   player.AddHealth(15); playerlife += 15;
+                   Colision = "Life: " + playerlife.ToString(); 
+                   this.map.Generate(matrix1, 32);  //reload matrixx              
+               }
             //--Load from file
             //spriteBatch.DrawString(font, gX, new Vector2(750, 50), Color.Blue);
            // spriteBatch.DrawString(font, gY, new Vector2(750, 100), Color.Blue);
+               if (playerlife <= 5) 
+                  {
+                   case1 = "Game over !";  
+                   ScreenManager.Instance.AddScreen(new GameoverScreen());             
+                  }
             spriteBatch.DrawString(font, Colision, new Vector2(750, 150), Color.Blue);
-            spriteBatch.DrawString(font, "Enemy killed:" + enemyHeroes.ToString(), new Vector2(750, 200), Color.Blue);
-            if (enemyHeroes == 4) spriteBatch.DrawString(font, "Game over !", new Vector2(750, 300), Color.Red); 
+            if (case1 != "") spriteBatch.DrawString(font, case1, new Vector2(750, 200), Color.Blue);
+            spriteBatch.DrawString(font, "Enemy killed:" + enemyHeroes.ToString(), new Vector2(750, 300), Color.Blue);
+             
         }
 
      

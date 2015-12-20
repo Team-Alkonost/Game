@@ -7,7 +7,7 @@ namespace AlkonostXNAGame.AlkonostDataStructure
     {
         private IItem weapon;
 
-        protected Enemy(float health, float damage, float armor, float movement, IItem weapon) 
+        protected Enemy(int health, float damage, float armor, float movement, IItem weapon) 
             : base (health, damage, armor, movement)
         {
             this.weapon = weapon;       
@@ -34,7 +34,7 @@ namespace AlkonostXNAGame.AlkonostDataStructure
             throw new NotImplementedException();
         }
 
-        public override float Hit()
+        public override int Hit()
         {
             throw new NotImplementedException();
         }

@@ -3,12 +3,13 @@ namespace AlkonostXNAGame.AlkonostDataStructure.Data
 {
     public partial class Player : Character
     {
-        private const float DefaultHealthPoints = 100;
+        private const int DefaultHealthPoints = 100;
         private const float DefaultAttackPoints = 50;
         private const float DefaultArmorPoints = 10;
         private const float DefaultMovementSpeed = 100;
         private const float MovementEffect = 0.05f;        
         private HashSet<Item> inventory;
+        private int playerHealthPoints;
 
         public Player() 
             : base(DefaultHealthPoints, DefaultAttackPoints, DefaultArmorPoints, DefaultMovementSpeed)
@@ -28,11 +29,18 @@ namespace AlkonostXNAGame.AlkonostDataStructure.Data
         {
             inventory.Add(item);
             
-        }    
+        }
 
-        public override float Hit()
+        public void AddHealth(int addHealthpoint)
         {
-            float playerHealth = this.CalculateHealth();
+            base.HealthPoints += addHealthpoint;
+        }   
+
+        public override int Hit()
+        {
+            // int playerHealthPoints = this.CalculateHealth();
+            int playerHealth =( base.HealthPoints - 5);
+           base.HealthPoints = playerHealth;
             return playerHealth;
         }
 
@@ -56,17 +64,16 @@ namespace AlkonostXNAGame.AlkonostDataStructure.Data
             return totalHealth;
         }
 
-        protected override float CalculateHealth()
+        protected override int CalculateHealth()
         {
-            float finalHealth = 0;
-            float itemHealthBonus = 0;
+            int finalHealth = 0;
+            int itemHealthBonus = 0;
             foreach (Item item in Inventory)
             {
-                itemHealthBonus += item.BonusHealth + item.BonusArmor +(item.BonusMovement * MovementEffect);
+               // itemHealthBonus += item.BonusHealth + item.BonusArmor +(item.BonusMovement * MovementEffect);
             }
-           // return finalHealth += this.AttackPoints + itemHealthBonus;
-            base.HealthPoints -= 10;
-            return finalHealth = base.HealthPoints;
+          // return finalHealth += this.AttackPoints + itemHealthBonus;
+          return finalHealth = base.HealthPoints;
         }
     }
 }
