@@ -110,7 +110,7 @@
     <Compile Include="GameEntryPoint.cs" />
     <Compile Include="AlkonostGame.cs" />
     <Compile Include="XNAData\InputManager.cs" />
-    <Compile Include="XNAData\Player.cs" />
+    <Compile Include="XNAData\GraphicPlayer.cs" />
     <Compile Include="XNAData\CharacterAnimation\KnightAnimation.cs" />
     <Compile Include="XNAData\ScreenManager.cs" />
     <Compile Include="XNAData\ScreenMap.cs" />

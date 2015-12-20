@@ -8,7 +8,7 @@ namespace AlkonostXNAGame.XNAData
 {
     using GameGraphic;
     using CharacterAnimation;
-    
+    using AlkonostDataStructure;
     
 
     class ScreenMap:GameScreen
@@ -18,7 +18,10 @@ namespace AlkonostXNAGame.XNAData
         public Vector2  position ;
         public int speed;
         Map map;
-        Player player;
+       Player player;
+       // Player player1;
+      
+
         SpriteFont font;
         string Colision="";
         int enemyHeroes = 0;
@@ -51,6 +54,8 @@ namespace AlkonostXNAGame.XNAData
            // position = new Vector2(300, 300);
             map = new Map();
             player = new Player();
+          //  player1 = new Player();
+            
             speed = 3;
             player.Initialize();
            
@@ -84,9 +89,9 @@ namespace AlkonostXNAGame.XNAData
             player.Update(gameTime);
 
             if (player.position.X <= 0) player.position.X = 0;
-            if (player.position.X >= 700-20 ) player.position.X = 700 - 20;
+            if (player.position.X >= 695 ) player.position.X = 695;
             if (player.position.Y <= 0) player.position.Y = 0;
-            if (player.position.Y >= 670 ) player.position.Y = 670;
+            if (player.position.Y >= 675 ) player.position.Y = 675;
             //exit from this window
           //  if (keyState.IsKeyDown(Keys.Z)) ScreenManeger.Instance.AddScreen(new SplashScreen());
         }
@@ -94,6 +99,8 @@ namespace AlkonostXNAGame.XNAData
         public override void Draw(SpriteBatch spriteBatch)
         {
             map.Draw(spriteBatch);
+         //  g= mappoint1.PointX;
+
            // spriteBatch.Draw(texture, position, Color.White);
             player.Draw(spriteBatch);
             int g = (int)player.position.X / 32;
@@ -101,33 +108,40 @@ namespace AlkonostXNAGame.XNAData
             int g2 = (int)player.position.Y / 32;
             string gY = g2.ToString();
            //--Load from file
-            if (g == 11 && g2 == 11)
+            if (g==11&& g==11)
                 if (matrix1[11, 11] != 1)
                 {
                   matrix1[11, 11] = 1;  //update matrix
                   this.map.Generate(matrix1, 32);  //reload matrixx
-                  Colision = "Enemy died "; enemyHeroes++;
+                  Colision = "Enemy ded ,Life:" + player.Hit().ToString(); 
+                  enemyHeroes++;
                 }
-            if (g == 0&&g2 == 0)
+            if (g == 0 && g2 == 0)
                 if (matrix1[0, 0] != 1)
                 {
                     matrix1[0, 0] = 1;  //update matrix
                     this.map.Generate(matrix1, 32);  //reload matrixx
-                    Colision = "Enemy died "; enemyHeroes++;
+                    Colision = "Enemy ded ,Life:" + player.Hit().ToString();
+                    
+                    enemyHeroes++;
+                    
                 }
-            if (g == 0&&g2 == 15)
+            if (g == 0 && g2 == 15)
                 if ( matrix1[15, 0] != 1)
                 {
                     matrix1[15, 0] = 1;  //update matrix               
                     this.map.Generate(matrix1, 32);  //reload matrixx
-                    Colision = "Enemy died "; enemyHeroes++;
+                    Colision = "Enemy ded ,Life: " + player.Hit().ToString();
+                    enemyHeroes++;
                 }
-            if (g == 0&&g2 == 18)
+            if (g == 0 && g2 == 18)
                 if (matrix1[18, 0] != 1)
                 {
                     matrix1[18, 0] = 1;   //update matrix       
                     this.map.Generate(matrix1, 32);  //reload matrixx
-                    Colision = "Enemy died "; enemyHeroes++;
+                    Colision = "Enemy ded ,Life:" + player.Hit().ToString(); 
+                    
+                    enemyHeroes++;
                 }
             //--Load from file
             //spriteBatch.DrawString(font, gX, new Vector2(750, 50), Color.Blue);
@@ -140,3 +154,5 @@ namespace AlkonostXNAGame.XNAData
      
     }
 }
+
+

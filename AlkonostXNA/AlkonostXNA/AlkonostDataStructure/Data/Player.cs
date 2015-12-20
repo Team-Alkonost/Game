@@ -1,6 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
-
 namespace AlkonostXNAGame.AlkonostDataStructure.Data
 {
     public partial class Player : Character
@@ -28,13 +26,14 @@ namespace AlkonostXNAGame.AlkonostDataStructure.Data
         
         public void AddItem(Item item)
         {
-            inventory.Add(item);            
+            inventory.Add(item);
+            
         }    
 
         public override float Hit()
         {
-            float damage =  this.CalculateAttackPoints();
-            return damage;
+            float playerHealth = this.CalculateHealth();
+            return playerHealth;
         }
 
         protected override float CalculateAttackPoints()
@@ -60,9 +59,14 @@ namespace AlkonostXNAGame.AlkonostDataStructure.Data
         protected override float CalculateHealth()
         {
             float finalHealth = 0;
-            float itemHealthBonus = Inventory.Sum(item => item.BonusHealth + item.BonusArmor + (item.BonusMovement*MovementEffect));
-
-            return finalHealth += this.AttackPoints + itemHealthBonus;
+            float itemHealthBonus = 0;
+            foreach (Item item in Inventory)
+            {
+                itemHealthBonus += item.BonusHealth + item.BonusArmor +(item.BonusMovement * MovementEffect);
+            }
+           // return finalHealth += this.AttackPoints + itemHealthBonus;
+            base.HealthPoints -= 10;
+            return finalHealth = base.HealthPoints;
         }
     }
 }
