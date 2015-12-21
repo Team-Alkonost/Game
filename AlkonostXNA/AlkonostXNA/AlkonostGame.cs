@@ -51,6 +51,7 @@ namespace AlkonostXNAGame.XNAData
             ScreenManager.Instance.LoadContent(Content);
             song = Content.Load<Song>("ABSTRACT_ATMOSPHERE");
             MediaPlayer.Play(song);
+            MediaPlayer.IsRepeating = true;
 
             // TODO: use this.Content to load your game content here
 
