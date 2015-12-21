@@ -3,6 +3,7 @@ using AlkonostXNAGame.AlkonostDataStructure.Interfaces;
 
 namespace AlkonostXNAGame.AlkonostDataStructure
 {
+    using XNAData;
     public abstract class Character : ICharacter, IAttackable
     {
         private float armorPoints;
@@ -58,12 +59,12 @@ namespace AlkonostXNAGame.AlkonostDataStructure
             }
             protected set
             {
-                if (value >= 0)
+                if (value <= 0)
                 {
-                    // th=row new ArgumentOutOfRangeException("HealthPoints cannot be negative");
-                    this.healthPoints = value;
+                    ScreenManager.Instance.AddScreen(new GameoverScreen());     
+                   
                 }
-                else this.healthPoints = 0;
+                this.healthPoints = value;
                 
             }
         }

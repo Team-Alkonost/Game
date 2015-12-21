@@ -132,7 +132,7 @@ namespace AlkonostXNAGame.XNAData
                if (playerlife <= 5) 
                   {
                    case1 = "Game over !";  
-                   ScreenManager.Instance.AddScreen(new GameoverScreen());             
+                           
                   }
             spriteBatch.DrawString(font, Colision, new Vector2(750, 150), Color.Blue);
             if (case1 != "") spriteBatch.DrawString(font, case1, new Vector2(750, 200), Color.Blue);
