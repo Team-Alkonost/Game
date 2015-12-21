@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using AlkonostXNAGame.AlkonostDataStructure.Exceptions;
 using AlkonostXNAGame.AlkonostDataStructure.Interfaces;
 
@@ -11,14 +11,14 @@ namespace AlkonostXNAGame.AlkonostDataStructure
         private float attackPoints;
         private int healthPoints;
         private float movementSpeed;
-            
+
         protected Character(int healthPoints, float attackPoints, float armorPoints, float movementSpeed)
         {
             this.HealthPoints = healthPoints;
             this.AttackPoints = attackPoints;
             this.ArmorPoints = armorPoints;
             this.MovementSpeed = movementSpeed;
-        }           
+        }
 
         public float ArmorPoints
         {
@@ -28,12 +28,12 @@ namespace AlkonostXNAGame.AlkonostDataStructure
             }
             protected set
             {
-                if(value < 0)
+                if (value < 0)
                 {
                     throw new AlkonostException("Armor point must be a positive integer number.");
                 }
                 this.armorPoints = value;
-            }            
+            }
         }
 
         public float AttackPoints
@@ -62,11 +62,11 @@ namespace AlkonostXNAGame.AlkonostDataStructure
             {
                 if (value <= 0)
                 {
-                    ScreenManager.Instance.AddScreen(new GameoverScreen());     
-                   
+                    ScreenManager.Instance.AddScreen(new GameoverScreen());
+
                 }
                 this.healthPoints = value;
-                
+
             }
         }
 

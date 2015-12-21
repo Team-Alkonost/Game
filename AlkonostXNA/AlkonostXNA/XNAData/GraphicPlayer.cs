@@ -77,7 +77,7 @@ namespace AlkonostXNAGame.AlkonostDataStructure.Data
 
         private void MoveDown()
         {
-            if (this.position.Y + (MovementSpeed * velocity) <= 645 - this.animation.texture.Height)
+            if (this.position.Y + (MovementSpeed * velocity) <= 665 - this.animation.texture.Height)
             {
                 this.position.Y += MovementSpeed * velocity;
             }

@@ -32,7 +32,7 @@ namespace AlkonostXNAGame.XNAData
 
             ScreenManager.Instance.Initialize();
             ScreenManager.Instance.Dimensions = new Vector2(1366, 768);
-            graphics.PreferredBackBufferHeight = 700;
+            graphics.PreferredBackBufferHeight = 710;
             // graphics.PreferredBackBufferWidth = (int)ScreenManeger.Instance.Dimensions.X;
             // graphics.PreferredBackBufferWidth = (int)ScreenManeger.Instance.Dimensions.Y;
             graphics.ApplyChanges();

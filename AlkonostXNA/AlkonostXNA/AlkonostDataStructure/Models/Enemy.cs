@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using AlkonostXNAGame.AlkonostDataStructure.Exceptions;
 using AlkonostXNAGame.AlkonostDataStructure.Interfaces;
 
@@ -8,10 +8,10 @@ namespace AlkonostXNAGame.AlkonostDataStructure
     {
         private IItem weapon;
 
-        protected Enemy(int health, float damage, float armor, float movement, IItem weapon) 
-            : base (health, damage, armor, movement)
+        protected Enemy(int health, float damage, float armor, float movement, IItem weapon)
+            : base(health, damage, armor, movement)
         {
-            this.weapon = weapon;       
+            this.weapon = weapon;
         }
 
         public IItem Wеаpon
@@ -22,7 +22,7 @@ namespace AlkonostXNAGame.AlkonostDataStructure
             }
             private set
             {
-                if(value == null)
+                if (value == null)
                 {
                     throw new AlkonostException("Weapon cannot be null.");
                 }

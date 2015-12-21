@@ -20,7 +20,7 @@ namespace AlkonostXNAGame.XNAData
         Map map;
        Player player;
        // Player player1;
-      
+       Texture2D Gameinfo;
 
         SpriteFont font;
         string Colision="";
@@ -79,6 +79,7 @@ namespace AlkonostXNAGame.XNAData
             if (font == null) font = Content.Load<SpriteFont>("Font1");
             map.Generate(matrix1, 32);  //map class
             player.LoadContent(content);
+            if (Gameinfo == null) Gameinfo = Content.Load<Texture2D>("Sprites/List");//knights
         }
 
         public override void UnloadContent()
@@ -113,7 +114,7 @@ namespace AlkonostXNAGame.XNAData
                 {                
                     matrix1[pointY, pointX] = 1;    //update matrix  
                     case1 = "Enemy is ded";
-                    Colision = "Life: " + player.Hit().ToString();
+                    Colision = "      " + player.Hit().ToString();
                     playerlife=player.Hit();                
                     enemyHeroes++;
                    this.map.Generate(matrix1, 32);  //reload matrixx          
@@ -123,20 +124,21 @@ namespace AlkonostXNAGame.XNAData
                    matrix1[pointY, pointX] = 1;    //update matrix                 
                    case1 = "You find Life";                   
                    player.AddHealth(15); playerlife += 15;
-                   Colision = "Life: " + playerlife.ToString(); 
+                   Colision = "      " + playerlife.ToString(); 
                    this.map.Generate(matrix1, 32);  //reload matrixx              
                }
             //--Load from file
-            //spriteBatch.DrawString(font, gX, new Vector2(750, 50), Color.Blue);
-           // spriteBatch.DrawString(font, gY, new Vector2(750, 100), Color.Blue);
-               if (playerlife <= 5) 
-                  {
-                   case1 = "Game over !";  
-                           
-                  }
-            spriteBatch.DrawString(font, Colision, new Vector2(750, 150), Color.Blue);
-            if (case1 != "") spriteBatch.DrawString(font, case1, new Vector2(750, 200), Color.Blue);
-            spriteBatch.DrawString(font, "Enemy killed:" + enemyHeroes.ToString(), new Vector2(750, 300), Color.Blue);
+               if (playerlife <= 0)  { case1 = "Game over !";   }
+            //Draw 
+            spriteBatch.Draw(Gameinfo, new Vector2(705, 00), Color.White); //Picture List.png
+            spriteBatch.DrawString(font, "1", new Vector2(790, 27), Color.Blue); // Level
+            spriteBatch.DrawString(font, " " + enemyHeroes.ToString(), new Vector2(840, 93), Color.Blue); //Enemy Kiled
+            spriteBatch.DrawString(font, Colision, new Vector2(780, 150), Color.Blue);   //Player life
+            spriteBatch.DrawString(font, "70", new Vector2(810, 193), Color.Blue);   //damage
+            spriteBatch.DrawString(font, "15", new Vector2(810, 237), Color.Blue);   //Armor
+            spriteBatch.DrawString(font, "80", new Vector2(840, 270), Color.Blue); //mouvement
+            if (case1 != "") spriteBatch.DrawString(font, case1, new Vector2(800, 305), Color.Blue);  //Game info 
+            
              
         }
 
