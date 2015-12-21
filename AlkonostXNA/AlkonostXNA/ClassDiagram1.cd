@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AlkonostXNAGame.AlkonostDataStructure.Character" Collapsed="true">
+    <Position X="3.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAGAAAAIgAQAAAAgAAAAIEAAAAQAAQAI=</HashCode>
+      <FileName>AlkonostDataStructure\Character.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AlkonostXNAGame.AlkonostDataStructure.Data.ArmorUpgrade" Collapsed="true">
+    <Position X="2.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAIAAIAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AlkonostDataStructure\Data\Bonus\ArmorUpgrade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.AlkonostDataStructure.Data.FirstAid" Collapsed="true">
+    <Position X="5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAIAAIAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AlkonostDataStructure\Data\Bonus\FirstAid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.AlkonostDataStructure.Data.HelpPackage" Collapsed="true">
+    <Position X="3.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACBAAAAgQAAAAgAAAAIAAAAAAAAABAAAAAQAAAAAAAA=</HashCode>
+      <FileName>AlkonostDataStructure\Data\Bonus\HelpPackage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AlkonostXNAGame.AlkonostDataStructure.Data.Wine" Collapsed="true">
+    <Position X="7.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAIAAIAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AlkonostDataStructure\Data\Bonus\Wine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.AlkonostDataStructure.Data.Axe" Collapsed="true">
+    <Position X="12.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAACQAAAAAAAAAAAAAAAAEAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>AlkonostDataStructure\Data\Item\Axe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.AlkonostDataStructure.Data.Boots" Collapsed="true">
+    <Position X="14.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAACQAAAAAAAAAAAAAAAAEAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>AlkonostDataStructure\Data\Item\Boots.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.AlkonostDataStructure.Data.Dager" Collapsed="true">
+    <Position X="1" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAACQAAAAAAAAAAAAAAAAEAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>AlkonostDataStructure\Data\Item\Dager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.AlkonostDataStructure.Data.Excalibur" Collapsed="true">
+    <Position X="3.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAACQAAAAAAAAAAAAAAAAEAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>AlkonostDataStructure\Data\Item\Excalibur.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.AlkonostDataStructure.Data.Flail" Collapsed="true">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAACQAAAAAAAAAAAAAAAAEAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>AlkonostDataStructure\Data\Item\Flail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.AlkonostDataStructure.Data.Gaunlet" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAACQAAAAAAAAAAAAAAAAEAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>AlkonostDataStructure\Data\Item\Gauntlet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.AlkonostDataStructure.Data.Helmet" Collapsed="true">
+    <Position X="10" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAACQAAAAAAAAAAAAAAAAEAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>AlkonostDataStructure\Data\Item\Helmet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.AlkonostDataStructure.Data.Item" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgQAAAAgAAAAAAAAAAAAAAEAAAAAQAAAAAAAA=</HashCode>
+      <FileName>AlkonostDataStructure\Data\Item\Item.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AlkonostXNAGame.AlkonostDataStructure.Data.Shield" Collapsed="true">
+    <Position X="16.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAACQAAAAAAAAAAAAAAAAEAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>AlkonostDataStructure\Data\Item\Shield.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.AlkonostDataStructure.Data.WhetStone" Collapsed="true">
+    <Position X="0.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAIAAIAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AlkonostDataStructure\Data\Item\WhetStone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.AlkonostDataStructure.Data.Player" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUEAAAAAAAAAwAABAIAIIAAgAAAAAAK0BwAAgAAQAc=</HashCode>
+      <FileName>AlkonostDataStructure\Data\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SourseCode.Models.Enemies.Enemy" Collapsed="true">
+    <Position X="5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAACAAAAAAAEAgAIAAAQAI=</HashCode>
+      <FileName>AlkonostDataStructure\Data\Enemy\Enemy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SourseCode.Models.Enemies.Horseman" Collapsed="true">
+    <Position X="2.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAQAAAAAAAAAAAAAgAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>AlkonostDataStructure\Data\Enemy\Horseman.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SourseCode.Models.Enemies.Knight" Collapsed="true">
+    <Position X="5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAQAAAAAAAAAAAAAgAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>AlkonostDataStructure\Data\Enemy\Knight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SourseCode.Models.Enemies.Spearman" Collapsed="true">
+    <Position X="7.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAQAAAAAAAAAAAAAgAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>AlkonostDataStructure\Data\Enemy\Spearman.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.AlkonostDataStructure.Engine.GameScreen" Collapsed="true">
+    <Position X="19.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AlkonostDataStructure\Engine\GameScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.AlkonostDataStructure.Exceptions.AlkonostException" Collapsed="true">
+    <Position X="19.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AlkonostDataStructure\Exceptions\AlkonostException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.XNAData.AlkonostGame" Collapsed="true">
+    <Position X="21" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEEAAAAAAAwAAAAAAAAAAAAAAAAgAAAAAAAAAAAQ=</HashCode>
+      <FileName>AlkonostGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.XNAData.GameEntryPoint" Collapsed="true">
+    <Position X="22.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>GameEntryPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.XNAData.Animation" Collapsed="true">
+    <Position X="10.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAYCEAAAAAAAAgAAEAOAIBACEEAAABCIAAAQAAAAAAQ=</HashCode>
+      <FileName>XNAData\Animation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.XNAData.FadeAnimation" Collapsed="true">
+    <Position X="10.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SAQAAAAAABAEAAAAAAAAAAAAAQAAABACAAAAAEgkAAQ=</HashCode>
+      <FileName>XNAData\FadeAnimation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.XNAData.GameScreen" Collapsed="true">
+    <Position X="3.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCEAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>XNAData\GameScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.XNAData.InputManager" Collapsed="true">
+    <Position X="22.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAACAAAAAAAAAAAAAABAAAAAQCAAAAAAAAA=</HashCode>
+      <FileName>XNAData\InputManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.XNAData.ScreenManager" Collapsed="true">
+    <Position X="22.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAAAgwAAAgAAAAIAAARgiAAAQIAgAAAAAAQ=</HashCode>
+      <FileName>XNAData\ScreenManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.XNAData.ScreenMap" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAYAEAAACAAAAwAAAAAQIAAAAAAAARABAAAAAAAAAAQ=</HashCode>
+      <FileName>XNAData\ScreenMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.XNAData.SplashScreen" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAEAAAAAAAAgAAAAAAAAQAAAAAAAAIAAAAAAAAAAQ=</HashCode>
+      <FileName>XNAData\SplashScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.XNAData.TitleScreen" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAYAEAAAAAAAAgAAAIAAAAAAAAAAAAAAAAAAABACAAQ=</HashCode>
+      <FileName>XNAData\TitleScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.Config.GameSettings" Collapsed="true">
+    <Position X="21" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAEAAAAAAAAAAAAAgIAAgAgAIAAAAAAAAAg=</HashCode>
+      <FileName>Config\GameSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.XNAData.CharacterAnimation.KnightAnimation" Collapsed="true">
+    <Position X="19.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQACAAAhAAAAQAAEAAAAACAAEAAAgACgAAAECAQAAQ=</HashCode>
+      <FileName>XNAData\CharacterAnimation\KnightAnimation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.XNAData.GameGraphic.DrawRectangle" Collapsed="true">
+    <Position X="7.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEEAAAAAAAggAAAAAAAAAAAAAACggAAIAgAAAAAQ=</HashCode>
+      <FileName>XNAData\GameGraphic\DrawRectangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.XNAData.GameGraphic.Map" Collapsed="true">
+    <Position X="21" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgBAAAIgQAQAAAAEAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>XNAData\GameGraphic\Map.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.XNAData.GameGraphic.Tiles" Collapsed="true">
+    <Position X="10.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAgAAAgAAAAAAACAAAAAgAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>XNAData\GameGraphic\Tiles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlkonostXNAGame.XNAData.GameGraphic.CollisionsTiles" Collapsed="true">
+    <Position X="10.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>XNAData\GameGraphic\Tiles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="AlkonostXNAGame.AlkonostDataStructure.Interfaces.IAttackable" Collapsed="true">
+    <Position X="19.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>AlkonostDataStructure\Interfaces\IAttackable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AlkonostXNAGame.AlkonostDataStructure.Interfaces.IBonus" Collapsed="true">
+    <Position X="21" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgQAAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>AlkonostDataStructure\Interfaces\IBonus.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AlkonostXNAGame.AlkonostDataStructure.Interfaces.ICharacter" Collapsed="true">
+    <Position X="10.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAgAAAAAAgAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>AlkonostDataStructure\Interfaces\ICharacter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AlkonostXNAGame.AlkonostDataStructure.Interfaces.IEnemy" Collapsed="true">
+    <Position X="10.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>AlkonostDataStructure\Interfaces\IEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AlkonostXNAGame.AlkonostDataStructure.Interfaces.IEngine" Collapsed="true">
+    <Position X="22.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>AlkonostDataStructure\Interfaces\IEngine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AlkonostXNAGame.AlkonostDataStructure.Interfaces.IItem" Collapsed="true">
+    <Position X="19.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgQAAAAgAAAAAAAAAAAAAAEAAAAAQAAAAAAAA=</HashCode>
+      <FileName>AlkonostDataStructure\Interfaces\IItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="AlkonostXNAGame.AlkonostDataStructure.Enum.LevelDifficulty" Collapsed="true">
+    <Position X="19.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkAAA=</HashCode>
+      <FileName>AlkonostDataStructure\Enum\LevelDifficulty.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
