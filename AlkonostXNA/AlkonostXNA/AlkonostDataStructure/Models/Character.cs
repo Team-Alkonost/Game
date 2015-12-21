@@ -1,4 +1,5 @@
 ﻿using System;
+using AlkonostXNAGame.AlkonostDataStructure.Exceptions;
 using AlkonostXNAGame.AlkonostDataStructure.Interfaces;
 
 namespace AlkonostXNAGame.AlkonostDataStructure
@@ -29,7 +30,7 @@ namespace AlkonostXNAGame.AlkonostDataStructure
             {
                 if(value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("ArmorPoints cannot be negative");
+                    throw new AlkonostException("Armor point must be a positive integer number.");
                 }
                 this.armorPoints = value;
             }            
@@ -45,7 +46,7 @@ namespace AlkonostXNAGame.AlkonostDataStructure
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("AttackPoints cannot be negative");
+                    throw new AlkonostException("Attack points must be a positive integer number.");
                 }
                 this.attackPoints = value;
             }

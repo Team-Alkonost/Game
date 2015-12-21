@@ -1,4 +1,5 @@
 ﻿using System;
+using AlkonostXNAGame.AlkonostDataStructure.Exceptions;
 using AlkonostXNAGame.AlkonostDataStructure.Interfaces;
 
 namespace AlkonostXNAGame.AlkonostDataStructure
@@ -23,7 +24,7 @@ namespace AlkonostXNAGame.AlkonostDataStructure
             {
                 if(value == null)
                 {
-                    throw new ArgumentNullException("Weapon must be valid");
+                    throw new AlkonostException("Weapon cannot be null.");
                 }
                 this.weapon = value;
             }

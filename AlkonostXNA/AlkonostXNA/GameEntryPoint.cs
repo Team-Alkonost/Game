@@ -1,12 +1,14 @@
+using AlkonostXNAGame.AlkonostDataStructure.Interfaces;
+
 namespace AlkonostXNAGame.XNAData
 {
 #if WINDOWS || XBOX
-    static class GameEntryPoint
+    class GameEntryPoint : IEngine
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        static void Main()
+        public void Run()
         {
             using (AlkonostGame game = new AlkonostGame())
             {
