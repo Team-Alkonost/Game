@@ -112,7 +112,7 @@ namespace AlkonostXNAGame.XNAData
                if (matrix1[pointY, pointX] == 4)  //4=enemy
                 {                
                     matrix1[pointY, pointX] = 1;    //update matrix  
-                    case1 = "Enamy is ded";
+                    case1 = "Enemy is ded";
                     Colision = "Life: " + player.Hit().ToString();
                     playerlife=player.Hit();                
                     enemyHeroes++;
