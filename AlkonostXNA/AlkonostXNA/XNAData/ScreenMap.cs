@@ -48,7 +48,7 @@ namespace AlkonostXNAGame.XNAData
                 {1,1,8,8,8,1,1,1,1,1,1,1,1,1,1,8,8,8,8,8,8,1},
                 {4,1,8,7,1,9,1,8,7,1,1,1,1,1,4,5,5,5,5,5,5,1},
                 {1,1,8,2,1,1,1,8,2,1,1,1,1,1,1,6,6,6,6,6,6,1},
-                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4},
+                {1,1,1,1,1,1,1,1,1,1,10,1,1,1,1,1,1,1,1,1,1,4},
             };
 
         public ScreenMap()
@@ -119,7 +119,7 @@ namespace AlkonostXNAGame.XNAData
                     enemyHeroes++;
                    this.map.Generate(matrix1, 32);  //reload matrixx          
                 }
-               if (matrix1[pointY, pointX] == 7)  // 4= open case
+               if (matrix1[pointY, pointX] == 7)  // 7= open case
                {
                    matrix1[pointY, pointX] = 1;    //update matrix                 
                    case1 = "You find Life";                   
@@ -127,7 +127,7 @@ namespace AlkonostXNAGame.XNAData
                    Colision = "      " + playerlife.ToString(); 
                    this.map.Generate(matrix1, 32);  //reload matrixx              
                }
-               if (matrix1[pointY, pointX] == 9)  // 4= open case
+               if (matrix1[pointY, pointX] == 9)  // 9= enemy 2
                {
                    matrix1[pointY, pointX] = 1;    //update matrix  
                    case1 = "Enemy is dead";
@@ -135,6 +135,14 @@ namespace AlkonostXNAGame.XNAData
                    playerlife = player.Hit();
                    enemyHeroes++;
                    this.map.Generate(matrix1, 32);  //reload matrixx            
+               }
+               if (matrix1[pointY, pointX] == 10)  // 7= open case
+               {
+                   matrix1[pointY, pointX] = 1;    //update matrix                 
+                   case1 = "find:Axe,Shield,Helmet";
+                   player.AddHealth(15); playerlife += 15;
+                   Colision = "      " + playerlife.ToString();
+                   this.map.Generate(matrix1, 32);  //reload matrixx              
                }
             //--Load from file
                if (playerlife <= 0)  { case1 = "Game over !";   }
@@ -147,7 +155,7 @@ namespace AlkonostXNAGame.XNAData
             spriteBatch.DrawString(font, "70", new Vector2(810, 193), Color.Blue);   //damage
             spriteBatch.DrawString(font, "15", new Vector2(810, 237), Color.Blue);   //Armor
             spriteBatch.DrawString(font, "80", new Vector2(840, 270), Color.Blue); //mouvement
-            if (case1 != "") spriteBatch.DrawString(font, case1, new Vector2(800, 305), Color.Blue);  //Game info 
+            if (case1 != "") spriteBatch.DrawString(font, case1, new Vector2(770, 305), Color.Blue);  //Game info 
             
              
         }
